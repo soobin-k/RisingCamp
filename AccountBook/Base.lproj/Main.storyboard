@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fwh-6T-GSj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HDR-h7-iu3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--가계부 목록-->
         <scene sceneID="o85-cq-MJl">
             <objects>
                 <viewController id="Fwh-6T-GSj" customClass="ViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2dx-jg-b0O">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Fwh-6T-GSj" id="jZ5-jF-TLR"/>
@@ -34,18 +34,117 @@
                             <constraint firstItem="I2B-cP-Ncd" firstAttribute="trailing" secondItem="2dx-jg-b0O" secondAttribute="trailing" id="zjP-VY-wjV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="가계부 목록" id="hLg-3R-BhN">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="U6z-Ki-y3v">
+                            <connections>
+                                <segue destination="tJO-Cp-u4M" kind="show" identifier="AddView" id="mVa-d9-GTn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="2dx-jg-b0O" id="gOq-qO-BJa"/>
+                        <segue destination="dY8-al-vOg" kind="show" identifier="DetailView" id="Qnh-na-Iyl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICD-Ph-Cv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="910" y="-366"/>
+            <point key="canvasLocation" x="2779.7101449275365" y="-466.07142857142856"/>
+        </scene>
+        <!--항목 추가-->
+        <scene sceneID="0x5-hC-lHR">
+            <objects>
+                <viewController id="tJO-Cp-u4M" customClass="AddViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RhF-F8-ANL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Sra-sA-5Sr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="항목 추가" id="qAJ-rL-h2F"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4vD-t6-itl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3734.7826086956525" y="-631.47321428571422"/>
+        </scene>
+        <!--상세 보기-->
+        <scene sceneID="e7W-kf-Zm8">
+            <objects>
+                <viewController id="dY8-al-vOg" customClass="DetailViewController" customModule="AccountBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U34-9e-dr1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="apk-Wi-a60"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="상세 보기" id="Yx0-zq-mkU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NAG-bB-Vmv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3727.5362318840585" y="10.714285714285714"/>
+        </scene>
+        <!--통계-->
+        <scene sceneID="qdJ-Eq-tUD">
+            <objects>
+                <viewController id="h5L-Re-kkg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xEO-Oo-gjr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6EP-Se-SlE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="통계" image="chart" id="MRN-Jj-Kr9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7d-tq-0ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789.8550724637682" y="309.375"/>
+        </scene>
+        <!--가계부-->
+        <scene sceneID="h0R-ql-gCW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IKO-pV-Cxq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="가계부" image="doc.text" catalog="system" id="aG5-ha-Ikl"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8ME-jV-628">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fwh-6T-GSj" kind="relationship" relationship="rootViewController" id="nWC-cl-AQh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uYq-kW-bkM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1818.840579710145" y="-366.29464285714283"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="XMw-eN-i09">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HDR-h7-iu3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lVR-iC-vtq">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemPinkColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="IKO-pV-Cxq" kind="relationship" relationship="viewControllers" id="wjn-aw-DXe"/>
+                        <segue destination="h5L-Re-kkg" kind="relationship" relationship="viewControllers" id="woC-g6-L9q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mdP-he-hiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.71014492753625" y="-28.794642857142854"/>
         </scene>
     </scenes>
     <resources>
+        <image name="chart" width="25" height="25"/>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

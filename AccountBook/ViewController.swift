@@ -23,7 +23,7 @@ class ViewController: UIViewController{
         tableView.register(UINib(nibName: "AccountTableViewCell", bundle: nil), forCellReuseIdentifier: "AccountCell")
         
         //초기 데이터
-        accountList.append(AccountBookList(image: #imageLiteral(resourceName: "chart"),  type: "쇼핑" , memo: "수빈이랑 쇼핑", price: "5000", date: "2020"))
+        accountList.append(AccountBookList(image: #imageLiteral(resourceName: "chart"),  type: "쇼핑" , memo: "수빈이랑 쇼핑", price: "5000원", date: "2020.02.25"))
         
     }
 
@@ -45,5 +45,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         cell.uiPrice.text = accountBookList.price
         cell.uiDate.text = accountBookList.date
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        print("선택된 행은 \(indexPath.row)번째 행입니다.")
+        performSegue(withIdentifier: "DetailView", sender: self)
     }
 }
