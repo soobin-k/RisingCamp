@@ -23,14 +23,6 @@ class ThirdViewController: UIViewController {
     var retry : Bool = false
     let mySingleton = MySingleton.shared
     let cartSingleton = CartSingleton.shared
-    //let nameArray = MySingleton.shared.nameArray
-    //let priceArray = MySingleton.shared.priceArray
-    
-    //var SecondViewController : SecondViewController?
-    
-    //var menuArray = CartSingleton.shared.menuArray
-    //var countArray = CartSingleton.shared.countArray
-    //var totalPriceArray = CartSingleton.shared.totalPriceArray
     
     //MARK: - Lifecycle
     

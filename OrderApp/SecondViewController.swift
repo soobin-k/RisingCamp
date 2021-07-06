@@ -34,10 +34,6 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         print("Second DEBUG VC1 >> \(#function) ")
         stackView.subviews.last!.tag = 3000
-       // guard let menuArray = CartSingleton.shared.menuArray else{ return }
-        
-        //label1.text = menuArray[0]
-        //resultTextLabel.text = resultText
     }
 
     // "뷰가 나타날 것이다."
