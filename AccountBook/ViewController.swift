@@ -6,11 +6,10 @@
 //
 
 import UIKit
+var accountList : [AccountBookList] = []
 
 class ViewController: UIViewController{
         
-    var accountList : [AccountBookList] = []
-    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -26,7 +25,10 @@ class ViewController: UIViewController{
         accountList.append(AccountBookList(image: #imageLiteral(resourceName: "chart"),  type: "쇼핑" , memo: "수빈이랑 쇼핑", price: "5000원", date: "2020.02.25"))
         
     }
-
+    override func viewWillAppear(_ animated: Bool)
+    {
+        tableView.reloadData()
+    }
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource{

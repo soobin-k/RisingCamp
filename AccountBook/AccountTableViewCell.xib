@@ -73,7 +73,7 @@
                 <outlet property="uiPrice" destination="EWN-89-ULn" id="C2e-Kz-ok8"/>
                 <outlet property="uiType" destination="Wo8-KG-bD1" id="PTi-0G-9fo"/>
             </connections>
-            <point key="canvasLocation" x="607" y="-54"/>
+            <point key="canvasLocation" x="193" y="-42"/>
         </tableViewCell>
     </objects>
     <resources>
