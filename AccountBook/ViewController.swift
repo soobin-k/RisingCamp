@@ -75,21 +75,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
                 cell.uiPrice.textColor = .blue
             }
         
-        
-        
-        
-        /*
-        cell.uiImage.image = accountBookList.image
-        cell.uiType.text = buyType[accountBookList.type!]
-        cell.uiMemo.text = accountBookList.memo
-        cell.uiPrice.text = accountBookList.price
-        cell.uiDate.text = accountBookList.date
-        if (accountList[indexPath.row].isExpenditure!) {
-            cell.uiPrice.textColor = .red
-        } else {
-            cell.uiPrice.textColor = .blue
-        }
-         */
         return cell
     }
     // 클릭 시, 상세보기
