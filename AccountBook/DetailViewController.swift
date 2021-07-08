@@ -1,19 +1,22 @@
 //
-//  AddViewController.swift
+//  DetailViewController.swift
 //  AccountBook
 //
 //  Created by 김수빈 on 2021/07/07.
 //
-import UIKit
+
 import Foundation
-class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    @IBOutlet weak var segmented: UISegmentedControl!
-    @IBOutlet weak var labelPrice: UITextField!
-    @IBOutlet weak var pickerView: UIPickerView!
+import UIKit
+class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
     @IBOutlet weak var labelMemo: UITextField!
-  
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var labelPrice: UITextField!
+    @IBOutlet weak var segmented: UISegmentedControl!
+    
     var selectRow = 0
+    var list: AccountBookList?
+    var indexOfList = 0
     var isExtended = true
     // 몇 개씩 보여줄 것인가
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -37,8 +40,15 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
             
         pickerView.delegate = self
         pickerView.dataSource = self
+        labelMemo.text = list?.memo!
+        labelPrice.text = list?.price!
+        pickerView.selectRow((list?.type)!, inComponent:0, animated:true)
+        if(list?.isExpenditure! == false){
+           segmented.selectedSegmentIndex = 1
+           isExtended = false
+        }
+        
     }
-    
     
     @IBAction func segmentChanged(_ sender: Any) {
         if (sender as AnyObject).selectedSegmentIndex == 0 {
@@ -48,13 +58,18 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
                 isExtended = false
             }
     }
-    @IBAction func btnAdd(_ sender: Any) {
+    @IBAction func btnEdit(_ sender: Any) {
         let today = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
         let dateString = dateFormatter.string(from: today)
-        
-        accountList.append(AccountBookList(image: buyImage[selectRow],  type: selectRow, memo: labelMemo.text!, price: labelPrice.text!, date: dateString, isExpenditure: isExtended))
+        accountList[indexOfList].date = dateString
+        accountList[indexOfList].memo = labelMemo.text
+        accountList[indexOfList].price = labelPrice.text
+        accountList[indexOfList].type = selectRow
+        print(selectRow)
+        accountList[indexOfList].image = buyImage[selectRow]
+        accountList[indexOfList].isExpenditure = isExtended
         _ = navigationController?.popViewController(animated: true)
     }
     

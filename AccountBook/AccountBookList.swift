@@ -9,16 +9,18 @@ import Foundation
 import UIKit
 class AccountBookList{
     var image : UIImage?
-    var type : String?
+    var type : Int?
     var memo : String?
     var price : String?
     var date : String?
+    var isExpenditure : Bool?
     
-    init( image : UIImage, type: String, memo: String, price: String, date: String){
+    init( image : UIImage, type: Int, memo: String, price: String, date: String, isExpenditure: Bool){
         self.image = image
         self.type = type
         self.memo = memo
         self.price = price
         self.date = date
+        self.isExpenditure = isExpenditure
     }
 }

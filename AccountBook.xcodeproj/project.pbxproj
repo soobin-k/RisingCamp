@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C34B47C8269591B700252F2A /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B47C7269591B700252F2A /* AddViewController.swift */; };
+		C34B47CA2695CA0500252F2A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34B47C92695CA0500252F2A /* DetailViewController.swift */; };
 		C38DE6A62694B53000BE847C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DE6A52694B53000BE847C /* AppDelegate.swift */; };
 		C38DE6A82694B53000BE847C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DE6A72694B53000BE847C /* SceneDelegate.swift */; };
 		C38DE6AA2694B53000BE847C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38DE6A92694B53000BE847C /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		C34B47C7269591B700252F2A /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		C34B47C92695CA0500252F2A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C38DE6A22694B53000BE847C /* AccountBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccountBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38DE6A52694B53000BE847C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C38DE6A72694B53000BE847C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				C38DE6BB2694D65800BE847C /* AccountTableViewCell.swift */,
 				C38DE6BC2694D65800BE847C /* AccountTableViewCell.xib */,
 				C34B47C7269591B700252F2A /* AddViewController.swift */,
+				C34B47C92695CA0500252F2A /* DetailViewController.swift */,
 			);
 			path = AccountBook;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				C38DE6A62694B53000BE847C /* AppDelegate.swift in Sources */,
 				C38DE6BD2694D65800BE847C /* AccountTableViewCell.swift in Sources */,
 				C38DE6A82694B53000BE847C /* SceneDelegate.swift in Sources */,
+				C34B47CA2695CA0500252F2A /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
