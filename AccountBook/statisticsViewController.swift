@@ -19,7 +19,9 @@ class statisticsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    override func viewWillAppear(_ animated: Bool)
+    {
         buyPrice = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
         piePrice = [0.0, 0.0]
         
@@ -38,7 +40,6 @@ class statisticsViewController: UIViewController {
                 setChart(dataPoints: buyType, values: buyPrice)
                 setPieChart(dataPoints: pieType, values: piePrice)
     }
-    
     func setChart(dataPoints: [String], values: [Double]) {
           
         // 데이터 생성
