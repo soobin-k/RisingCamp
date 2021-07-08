@@ -53,8 +53,12 @@ class AddViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
         let dateString = dateFormatter.string(from: today)
+        if(isExtended){
+            expendList.addNew(image: buyImage[selectRow],  type: selectRow, memo: labelMemo.text!, price: labelPrice.text!, date: dateString, isExpenditure: isExtended)
+        }else{
+            incomeList.addNew(image: buyImage[selectRow],  type: selectRow, memo: labelMemo.text!, price: labelPrice.text!, date: dateString, isExpenditure: isExtended)
+        }
         
-        accountList.append(AccountBookList(image: buyImage[selectRow],  type: selectRow, memo: labelMemo.text!, price: labelPrice.text!, date: dateString, isExpenditure: isExtended))
         _ = navigationController?.popViewController(animated: true)
     }
     

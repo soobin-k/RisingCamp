@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+
 class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var labelMemo: UITextField!
@@ -15,9 +16,10 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var segmented: UISegmentedControl!
     
     var selectRow = 0
-    var list: AccountBookList?
+    var list = AccountBook(image: buyImage[0],  type: 0 , memo: "수빈이랑 쇼핑", price: "5000", date: "2020.02.25", isExpenditure: true)
     var indexOfList = 0
     var isExtended = true
+    var initExtended = true
     // 몇 개씩 보여줄 것인가
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -40,12 +42,13 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             
         pickerView.delegate = self
         pickerView.dataSource = self
-        labelMemo.text = list?.memo!
-        labelPrice.text = list?.price!
-        pickerView.selectRow((list?.type)!, inComponent:0, animated:true)
-        if(list?.isExpenditure! == false){
+        labelMemo.text = list.memo
+        labelPrice.text = list.price
+        pickerView.selectRow((list.type), inComponent:0, animated:true)
+        if(list.isExpenditure == false){
            segmented.selectedSegmentIndex = 1
            isExtended = false
+           initExtended = false
         }
         
     }
@@ -63,13 +66,18 @@ class DetailViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy.MM.dd"
         let dateString = dateFormatter.string(from: today)
-        accountList[indexOfList].date = dateString
-        accountList[indexOfList].memo = labelMemo.text
-        accountList[indexOfList].price = labelPrice.text
-        accountList[indexOfList].type = selectRow
-        print(selectRow)
-        accountList[indexOfList].image = buyImage[selectRow]
-        accountList[indexOfList].isExpenditure = isExtended
+        if(isExtended == true && initExtended == true){
+            expendList.edit(image: buyImage[selectRow], type: selectRow, memo: labelMemo.text!, price: labelPrice.text!, date: dateString, isExpenditure: isExtended, index: indexOfList)
+        }else if(isExtended == false && initExtended == false){
+            incomeList.edit(image: buyImage[selectRow], type: selectRow, memo: labelMemo.text!, price: labelPrice.text!, date: dateString, isExpenditure: isExtended, index: indexOfList)
+        }else if(isExtended == true && initExtended == false){
+            incomeList.delete(indexRow: indexOfList)
+            expendList.addNew(image: buyImage[selectRow], type: selectRow, memo: labelMemo.text!, price: labelPrice.text!, date: dateString, isExpenditure: isExtended)
+        }else{
+            expendList.delete(indexRow: indexOfList)
+            incomeList.addNew(image: buyImage[selectRow], type: selectRow, memo: labelMemo.text!, price: labelPrice.text!, date: dateString, isExpenditure: isExtended)
+        }
+        
         _ = navigationController?.popViewController(animated: true)
     }
     

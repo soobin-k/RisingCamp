@@ -39,7 +39,6 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="p4b-r4-Ejw">
                                 <rect key="frame" x="86" y="159" width="242" height="32"/>
                                 <segments>
-                                    <segment title="전체"/>
                                     <segment title="지출"/>
                                     <segment title="수입"/>
                                 </segments>
@@ -336,14 +335,70 @@
         <!--통계-->
         <scene sceneID="qdJ-Eq-tUD">
             <objects>
-                <viewController id="h5L-Re-kkg" sceneMemberID="viewController">
+                <viewController id="h5L-Re-kkg" customClass="statisticsViewController" customModule="AccountBook" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xEO-Oo-gjr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="OQw-yd-oBo">
+                                <rect key="frame" x="44" y="110" width="327" height="305"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="유형별 통계" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpL-7w-kg9">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0h-Kk-7T8" customClass="BarChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="55" width="327" height="250"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="d0h-Kk-7T8" firstAttribute="leading" secondItem="OQw-yd-oBo" secondAttribute="leading" id="fRN-QK-Dnc"/>
+                                    <constraint firstAttribute="trailing" secondItem="d0h-Kk-7T8" secondAttribute="trailing" id="jt2-5j-VOg"/>
+                                    <constraint firstAttribute="bottom" secondItem="d0h-Kk-7T8" secondAttribute="bottom" id="us6-Tz-t4f"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="ou8-g9-R3h">
+                                <rect key="frame" x="44" y="445" width="327" height="308"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수입 지출 비율" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8P-f9-gT8">
+                                        <rect key="frame" x="0.0" y="0.0" width="113" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ge5-Sr-AkK" customClass="PieChartView" customModule="Charts">
+                                        <rect key="frame" x="0.0" y="58" width="327" height="250"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ge5-Sr-AkK" secondAttribute="bottom" id="Pqd-A1-Qe4"/>
+                                    <constraint firstItem="Ge5-Sr-AkK" firstAttribute="leading" secondItem="ou8-g9-R3h" secondAttribute="leading" id="YK1-xf-icC"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ge5-Sr-AkK" secondAttribute="trailing" id="rLY-Bw-5uO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6EP-Se-SlE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OQw-yd-oBo" firstAttribute="top" secondItem="6EP-Se-SlE" secondAttribute="top" constant="66" id="2ps-6N-jy8"/>
+                            <constraint firstItem="6EP-Se-SlE" firstAttribute="bottom" secondItem="ou8-g9-R3h" secondAttribute="bottom" constant="60" id="Ajc-sf-iIY"/>
+                            <constraint firstItem="OQw-yd-oBo" firstAttribute="leading" secondItem="6EP-Se-SlE" secondAttribute="leading" constant="44" id="MOM-OM-6lf"/>
+                            <constraint firstItem="ou8-g9-R3h" firstAttribute="leading" secondItem="6EP-Se-SlE" secondAttribute="leading" constant="44" id="PTO-8b-iTR"/>
+                            <constraint firstItem="6EP-Se-SlE" firstAttribute="trailing" secondItem="ou8-g9-R3h" secondAttribute="trailing" constant="43" id="SjV-gt-2vv"/>
+                            <constraint firstItem="ou8-g9-R3h" firstAttribute="top" secondItem="xEO-Oo-gjr" secondAttribute="top" constant="445" id="jCB-xu-q7O"/>
+                            <constraint firstItem="6EP-Se-SlE" firstAttribute="trailing" secondItem="OQw-yd-oBo" secondAttribute="trailing" constant="43" id="kxr-ds-MOZ"/>
+                            <constraint firstItem="ou8-g9-R3h" firstAttribute="top" secondItem="OQw-yd-oBo" secondAttribute="bottom" constant="30" id="o8x-dP-SoC"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="통계" image="chart" id="MRN-Jj-Kr9"/>
+                    <connections>
+                        <outlet property="barChartView" destination="d0h-Kk-7T8" id="Dwj-2x-YnN"/>
+                        <outlet property="pieChartView" destination="Ge5-Sr-AkK" id="FC1-WP-Vl3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7d-tq-0ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
