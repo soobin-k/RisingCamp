@@ -83,7 +83,7 @@
                                     <segment title="비용"/>
                                     <segment title="수입"/>
                                 </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                 <connections>
                                     <action selector="segmentChanged:" destination="tJO-Cp-u4M" eventType="valueChanged" id="XbQ-BB-TQs"/>
                                 </connections>
@@ -209,7 +209,7 @@
                                     <segment title="비용"/>
                                     <segment title="수입"/>
                                 </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemRedColor"/>
+                                <color key="selectedSegmentTintColor" systemColor="systemYellowColor"/>
                                 <connections>
                                     <action selector="segmentChanged:" destination="dY8-al-vOg" eventType="valueChanged" id="nH9-Up-5xM"/>
                                 </connections>
@@ -450,9 +450,6 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
