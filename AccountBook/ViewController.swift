@@ -13,9 +13,13 @@ var incomeList = AccountBookList()
 let buyType = ["쇼핑","음식","교통","오락","생활","투자", "여행", "월급"]
 let buyImage = [ #imageLiteral(resourceName: "online-shopping"),#imageLiteral(resourceName: "food"),#imageLiteral(resourceName: "vehicles"),#imageLiteral(resourceName: "game-controller"),#imageLiteral(resourceName: "house"),#imageLiteral(resourceName: "investment"),#imageLiteral(resourceName: "travel-bag"),#imageLiteral(resourceName: "money")]
 class ViewController: UIViewController{
+    
         
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var segmented: UISegmentedControl!
+    var filteredData: [String]!
+    var data: [String]!
+    var searchController: UISearchController!
     var isAll = true
     var isExpended = true
     override func viewDidLoad() {
@@ -38,6 +42,7 @@ class ViewController: UIViewController{
         expendList.addNew(image: buyImage[1],  type: 1 , memo: "점심 식사", price: "10000", date: "2021.07.07", isExpenditure: true)
         expendList.addNew(image: buyImage[5],  type: 5 , memo: "삼성전자 주식", price: "80000", date: "2021.07.05", isExpenditure: true)
         
+        
         tableView.reloadData()
         
     }
@@ -57,6 +62,7 @@ class ViewController: UIViewController{
         }
        
     }
+    
 }
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
@@ -65,6 +71,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         
         if(isExpended){
             return expendList.count
+            
         }else{
             return incomeList.count
         }

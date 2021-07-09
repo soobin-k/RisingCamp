@@ -12,9 +12,10 @@ class AccountBookList {
   init() {
    self.storage = [AccountBook]()
   }
-    public var count: Int{
+  public var count: Int{
    return storage.count
   }
+  
   public func addNew(image : UIImage, type: Int, memo: String, price: String, date: String, isExpenditure: Bool) {
     self.storage.append(AccountBook(image: image, type: type, memo: memo, price: price, date: date, isExpenditure: isExpenditure))
   }
