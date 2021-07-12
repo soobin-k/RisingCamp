@@ -19,6 +19,21 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_edit" translatesAutoresizingMaskIntoConstraints="NO" id="Gwb-xV-HzH">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sP-2x-odG">
+                                <rect key="frame" x="140" y="91" width="108" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ingredient3"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZD-DK-osv">
+                                <rect key="frame" x="258" y="20" width="148" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ingredient2"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN7-4c-Hux">
+                                <rect key="frame" x="264" y="92" width="127" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ingredient4"/>
+                            </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IXW-TF-CgU">
                                 <rect key="frame" x="437" y="91" width="172" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -45,6 +60,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ramen5"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fny-Lp-PvI">
+                                <rect key="frame" x="140" y="20" width="116" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ingredient1"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IrR-Lb-cUJ">
+                                <rect key="frame" x="387" y="180" width="196" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ingredient5"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ingredient1" translatesAutoresizingMaskIntoConstraints="NO" id="e5g-cY-p3b">
+                                <rect key="frame" x="653" y="185" width="103" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cPx-p2-HJj">
+                                <rect key="frame" x="668" y="102" width="75" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -56,6 +92,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnIngredient1" destination="fny-Lp-PvI" id="GVz-B7-hLa"/>
+                        <outlet property="btnIngredient2" destination="3sP-2x-odG" id="5wt-3i-SDp"/>
+                        <outlet property="btnIngredient3" destination="3sP-2x-odG" id="Saa-lx-rl2"/>
+                        <outlet property="btnIngredient4" destination="HN7-4c-Hux" id="kus-gn-Mr6"/>
+                        <outlet property="btnIngredient5" destination="IrR-Lb-cUJ" id="aCi-H0-hCf"/>
                         <outlet property="btnRamen1" destination="MME-72-73k" id="din-R3-51n"/>
                         <outlet property="btnRamen2" destination="Ui0-24-7us" id="7lY-70-GEb"/>
                         <outlet property="btnRamen3" destination="BMN-ak-dUv" id="2pq-WO-OBe"/>
@@ -69,6 +110,11 @@
     </scenes>
     <resources>
         <image name="background_edit" width="1220" height="779"/>
+        <image name="ingredient1" width="219" height="136"/>
+        <image name="ingredient2" width="279" height="122"/>
+        <image name="ingredient3" width="204" height="106"/>
+        <image name="ingredient4" width="227" height="112"/>
+        <image name="ingredient5" width="366" height="404"/>
         <image name="ramen2" width="283" height="177"/>
         <image name="ramen4" width="282" height="180"/>
         <image name="ramen5" width="285" height="179"/>

@@ -17,6 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnRamen3: UIButton!
     @IBOutlet weak var btnRamen4: UIButton!
     
+    @IBOutlet weak var btnIngredient1: UIButton!
+    @IBOutlet weak var btnIngredient2: UIButton!
+    @IBOutlet weak var btnIngredient3: UIButton!
+    @IBOutlet weak var btnIngredient4: UIButton!
+    @IBOutlet weak var btnIngredient5: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
