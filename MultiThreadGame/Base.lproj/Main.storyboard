@@ -99,6 +99,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e8L-45-a35">
+                                <rect key="frame" x="591" y="259" width="157" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -120,6 +124,7 @@
                         <outlet property="btnRamen3" destination="BMN-ak-dUv" id="2pq-WO-OBe"/>
                         <outlet property="btnRamen4" destination="Qqw-FM-v2N" id="7aP-kL-RHT"/>
                         <outlet property="imageCurrentIngredient" destination="e5g-cY-p3b" id="jaD-sT-e41"/>
+                        <outlet property="imageResult" destination="e8L-45-a35" id="Y9m-Vf-H6t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

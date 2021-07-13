@@ -13,13 +13,16 @@ class ViewController: UIViewController {
     let ramenImage = [UIImage(named: "ramen1"), UIImage(named: "ramen2"), UIImage(named: "ramen3"), UIImage(named: "ramen4"), UIImage(named: "ramen5"), UIImage(named: "ramen6"), UIImage(named: "ramen7")]
     
     //라면 재료 배열
-    let ingredientArray = ["물", "스프", "면", "파", "계란"]
+    let ingredientArray = ["시작", "물", "스프", "면", "파", "계란", "끝"]
     
     //라면 냄비별 상태
     var ramenState = ["시작", "시작", "시작", "시작"]
     
     //현재 선택된 재료
     var selectedIngredient: String = ""
+    
+    //생명
+    var heartLimit = 3
     
     //라면 냄비 버튼
     @IBOutlet weak var btnRamen1: UIButton!
@@ -36,6 +39,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageCurrentIngredient: UIImageView!
     
+    //결과 이미지
+    @IBOutlet weak var imageResult: UIImageView!
     
     
     override func viewDidLoad() {
@@ -57,7 +62,7 @@ class ViewController: UIViewController {
         return .landscapeLeft
     }
     
-
+    /*
     /// 2. 데이터가 섞여서 나타나는 경우
     private func setupData02() {
         
@@ -101,28 +106,29 @@ class ViewController: UIViewController {
             }
         }
     }
+     */
     
     //현재 재료 선택
     @IBAction func btnIngredient1(_ sender: Any) {
         imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient5")
-        selectedIngredient = ingredientArray[0]
+        selectedIngredient = ingredientArray[1]
     }
     
     @IBAction func btnIngredient2(_ sender: Any) {
         imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient1")
-        selectedIngredient = ingredientArray[1]
+        selectedIngredient = ingredientArray[2]
     }
     @IBAction func btnIngredient3(_ sender: Any) {
         imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient3")
-        selectedIngredient = ingredientArray[2]
+        selectedIngredient = ingredientArray[3]
     }
     @IBAction func btnIngredient4(_ sender: Any) {
         imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient2")
-        selectedIngredient = ingredientArray[3]
+        selectedIngredient = ingredientArray[4]
     }
     @IBAction func btnIngredient5(_ sender: Any) {
         imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient4")
-        selectedIngredient = ingredientArray[4]
+        selectedIngredient = ingredientArray[5]
     }
     
     
@@ -133,8 +139,8 @@ class ViewController: UIViewController {
             ramenState[0] = "물"
             self.btnRamen1.setImage(self.ramenImage[1], for: .normal)
             
-            DispatchQueue.global(qos: .userInitiated).async {
-                for _ in 0...10 {
+            DispatchQueue.global(qos: .userInitiated).async { [self] in
+                for i in 0...9 {
                     if(self.selectedIngredient == "스프" && self.ramenState[0] == "물"){
                         self.ramenState[0] = "스프"
                         DispatchQueue.main.sync {
@@ -158,14 +164,29 @@ class ViewController: UIViewController {
                         DispatchQueue.main.sync {
                             self.btnRamen1.setImage(self.ramenImage[5], for: .normal)
                         }
+                    }else if(self.ramenState[0] == "계란"){
+                        //쓰레드 강제 종료
                     }
+                    print("🍜 ramen1 : " + String(i+1) + "초")
                     usleep(1000000)
                 }
                 DispatchQueue.main.sync {
                     self.btnRamen1.setImage(self.ramenImage[6], for: .normal)
                 }
+                self.ramenState[0] = "끝"
             }
+        }else if(ramenState[0] == "끝"){
+            heartLimit -= 1
+            self.btnRamen1.setImage(self.ramenImage[0], for: .normal)
+            self.ramenState[0] = "시작"
         }
+        /*
+        else{
+            let alert = UIAlertController(title: "경고", message: "조리 순서가 맞지 않습니다.", preferredStyle: UIAlertController.Style.alert)
+            let okay = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+            alert.addAction(okay)
+            self.present(alert, animated: false)
+        }*/
     }
     
     
