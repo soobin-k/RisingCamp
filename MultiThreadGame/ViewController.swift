@@ -24,6 +24,14 @@ class ViewController: UIViewController {
     //생명
     var heartLimit = 3
     
+    //타이머, 초, 실행 여부
+    var timer:Timer = Timer()
+    var count:Int = 0
+    var timerCounting:Bool = false
+    
+    //현재 스코어
+    var score = 0
+    
     //라면 냄비 버튼
     @IBOutlet weak var btnRamen1: UIButton!
     @IBOutlet weak var btnRamen2: UIButton!
@@ -37,16 +45,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnIngredient4: UIButton!
     @IBOutlet weak var btnIngredient5: UIButton!
     
+    //현재 재료 이미지
     @IBOutlet weak var imageCurrentIngredient: UIImageView!
     
     //결과 이미지
     @IBOutlet weak var imageResult: UIImageView!
     
+    @IBOutlet weak var labelScore: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-              //  setupData02()
 
     }
     
@@ -58,55 +67,10 @@ class ViewController: UIViewController {
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
         return .landscapeLeft
     }
+    
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
         return .landscapeLeft
     }
-    
-    /*
-    /// 2. 데이터가 섞여서 나타나는 경우
-    private func setupData02() {
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            //self.ascendingNumber()
-            for _ in 0...100 {
-                DispatchQueue.main.sync {
-                    self.btnRamen1.setImage(self.ramenImage.randomElement()!!, for: .normal)
-                }
-                usleep(100000)
-            }
-        }
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            //self.descendingNumber()
-            for _ in 0...100 {
-                DispatchQueue.main.sync {
-                    self.btnRamen2.setImage(self.ramenImage.randomElement()!!, for: .normal)
-                }
-                usleep(100000)
-            }
-        }
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            //self.descendingNumber()
-            for _ in 0...100 {
-                DispatchQueue.main.sync {
-                    self.btnRamen3.setImage(self.ramenImage.randomElement()!!, for: .normal)
-                }
-                usleep(100000)
-            }
-        }
-        
-        DispatchQueue.global(qos: .userInitiated).async {
-            //self.descendingNumber()
-            for _ in 0...100 {
-                DispatchQueue.main.sync {
-                    self.btnRamen4.setImage(self.ramenImage.randomElement()!!, for: .normal)
-                }
-                usleep(100000)
-            }
-        }
-    }
-     */
     
     //현재 재료 선택
     @IBAction func btnIngredient1(_ sender: Any) {
@@ -131,112 +95,98 @@ class ViewController: UIViewController {
         selectedIngredient = ingredientArray[5]
     }
     
+    // 라면 냄비 카운터
+    @objc func timerCounter() -> Void
+    {
+        count = count + 1
+        
+        if(count<=10){
+            print("🍜 ramen1 : " + String(count) + "초")
+        }
+        else{
+            self.ramenState[0] = "끝"
+            DispatchQueue.main.sync {
+                self.btnRamen1.setImage(self.ramenImage[6], for: .normal)
+            }
+            timer.invalidate()
+            timerCounting = false
+            print("⏰ 타이머 종료")
+            count = 0
+        }
+        
+        
+    }
     
     //라면 냄비 클릭 쓰레드 생성
     @IBAction func btnRamen1(_ sender: Any) {
         //btnRamen1.setImage(self.ramenImage[0], for: .normal)
-        if(selectedIngredient == "물" && ramenState[0] == "시작"){
-            ramenState[0] = "물"
-            self.btnRamen1.setImage(self.ramenImage[1], for: .normal)
-            
-            DispatchQueue.global(qos: .userInitiated).async { [self] in
-                for i in 0...9 {
-                    if(self.selectedIngredient == "스프" && self.ramenState[0] == "물"){
-                        self.ramenState[0] = "스프"
-                        DispatchQueue.main.sync {
-                            self.btnRamen1.setImage(self.ramenImage[2], for: .normal)
-                        }
+        if(!timerCounting){
+            if(selectedIngredient == "물" && ramenState[0] == "시작"){
+                ramenState[0] = "물"
+                self.btnRamen1.setImage(self.ramenImage[1], for: .normal)
+                DispatchQueue.global(qos: .userInitiated).async { [self] in
+                    timerCounting = true
+                    let runLoop = RunLoop.current
+                    timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerCounter), userInfo: nil, repeats: true)
+                    
+                    while timerCounting{
+                        runLoop.run(until: Date().addingTimeInterval(0.1))
                     }
-                    else if(self.selectedIngredient == "면" && self.ramenState[0] == "스프"){
-                        self.ramenState[0] = "면"
-                        DispatchQueue.main.sync {
-                            self.btnRamen1.setImage(self.ramenImage[3], for: .normal)
-                        }
-                    }
-                    else if(self.selectedIngredient == "파" && self.ramenState[0] == "면"){
-                        self.ramenState[0] = "파"
-                        DispatchQueue.main.sync {
-                            self.btnRamen1.setImage(self.ramenImage[4], for: .normal)
-                        }
-                    }
-                    else if(self.selectedIngredient == "계란" && self.ramenState[0] == "파"){
-                        self.ramenState[0] = "계란"
-                        DispatchQueue.main.sync {
-                            self.btnRamen1.setImage(self.ramenImage[5], for: .normal)
-                        }
-                    }else if(self.ramenState[0] == "계란"){
-                        //쓰레드 강제 종료
-                    }
-                    print("🍜 ramen1 : " + String(i+1) + "초")
-                    usleep(1000000)
                 }
-                DispatchQueue.main.sync {
-                    self.btnRamen1.setImage(self.ramenImage[6], for: .normal)
-                }
-                self.ramenState[0] = "끝"
             }
-        }else if(ramenState[0] == "끝"){
-            heartLimit -= 1
-            self.btnRamen1.setImage(self.ramenImage[0], for: .normal)
-            self.ramenState[0] = "시작"
+            else if(ramenState[0] == "끝"){
+                self.btnRamen1.setImage(self.ramenImage[0], for: .normal)
+                heartLimit -= 1
+                print("💔 목숨 개수 : " + String(heartLimit))
+                self.imageResult.image = #imageLiteral(resourceName: "ramen7")
+                self.ramenState[0] = "시작"
+            }
+        }else{
+            if(self.selectedIngredient == "스프" && self.ramenState[0] == "물"){
+                self.ramenState[0] = "스프"
+                
+                    self.btnRamen1.setImage(self.ramenImage[2], for: .normal)
+                
+            }
+            else if(self.selectedIngredient == "면" && self.ramenState[0] == "스프"){
+                self.ramenState[0] = "면"
+                
+                    self.btnRamen1.setImage(self.ramenImage[3], for: .normal)
+                
+            }
+            else if(self.selectedIngredient == "파" && self.ramenState[0] == "면"){
+                self.ramenState[0] = "파"
+               
+                    self.btnRamen1.setImage(self.ramenImage[4], for: .normal)
+                
+            }
+            else if(self.selectedIngredient == "계란" && self.ramenState[0] == "파"){
+                self.ramenState[0] = "계란"
+                
+                    self.btnRamen1.setImage(self.ramenImage[5], for: .normal)
+                
+            }else if(self.ramenState[0] == "계란"){
+                timer.invalidate()
+                timerCounting = false
+                print("⏰ 타이머 종료")
+                count = 0
+                self.btnRamen1.setImage(self.ramenImage[0], for: .normal)
+                self.imageResult.image = #imageLiteral(resourceName: "ramen6")
+                self.ramenState[0] = "시작"
+                print("💸 1000원 획득")
+                score += 1000
+                labelScore.text = String(score)
+            }
         }
-        /*
-        else{
-            let alert = UIAlertController(title: "경고", message: "조리 순서가 맞지 않습니다.", preferredStyle: UIAlertController.Style.alert)
-            let okay = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
-            alert.addAction(okay)
-            self.present(alert, animated: false)
-        }*/
     }
-    
-    
     
     /*
-    /// 3. 공유자원의 문제
-    private func setupData03() {
-        
-        // 첫 번째 출금 : 맥북비용
-        DispatchQueue.global(qos: .userInteractive).async {
-            var currentMoney = self.myMoney
-            currentMoney -= 98
-            usleep(100000)
-            self.myMoney = currentMoney
-        }
-        
-        // 두 번째 출금 : 대중교통비용
-        DispatchQueue.global(qos: .userInteractive).async {
-            var currentMoney = self.myMoney
-            currentMoney -= 7
-            self.myMoney = currentMoney
-        }
-        
-        // 최소 필요한 스시의 개수는 2 개
-        
-        print("DEBUG>> 현재 잔액 : \(self.myMoney) ")
-        if self.myMoney < 0 {
-            print("DEBUG>> ❗️ 통장 잔액이 부족합니다. ")
-            
-        } else {
-            print("DEBUG>> 🦞 랍스터 먹을 돈이 있습니다. ")
-        }
-    }
-
-    
-    private func ascendingNumber() {
-        for i in 0...100 {
-            
-            print("🍺  ",i)
-            usleep(100000)
-        }
-    }
-    
-    private func descendingNumber() {
-        for i in (0...100).reversed() {
-            print("🍗  ",i)
-            usleep(100000)
-        }
+    else{
+        let alert = UIAlertController(title: "경고", message: "조리 순서가 맞지 않습니다.", preferredStyle: UIAlertController.Style.alert)
+        let okay = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+        alert.addAction(okay)
+        self.present(alert, animated: false)
     }*/
     
-
 }
 
