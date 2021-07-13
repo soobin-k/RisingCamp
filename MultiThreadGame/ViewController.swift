@@ -9,28 +9,43 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var myMoney: Int = 100
-    let ramenImage = [UIImage(named: "ramen1"), UIImage(named: "ramen2"), UIImage(named: "ramen3"), UIImage(named: "ramen4"), UIImage(named: "ramen5"), UIImage(named: "ramen6")]
+    //라면 조리 순서별 이미지
+    let ramenImage = [UIImage(named: "ramen1"), UIImage(named: "ramen2"), UIImage(named: "ramen3"), UIImage(named: "ramen4"), UIImage(named: "ramen5"), UIImage(named: "ramen6"), UIImage(named: "ramen7")]
     
+    //라면 재료 배열
+    let ingredientArray = ["물", "스프", "면", "파", "계란"]
+    
+    //라면 냄비별 상태
+    var ramenState = ["시작", "시작", "시작", "시작"]
+    
+    //현재 선택된 재료
+    var selectedIngredient: String = ""
+    
+    //라면 냄비 버튼
     @IBOutlet weak var btnRamen1: UIButton!
     @IBOutlet weak var btnRamen2: UIButton!
     @IBOutlet weak var btnRamen3: UIButton!
     @IBOutlet weak var btnRamen4: UIButton!
     
+    //라면 재료 버튼
     @IBOutlet weak var btnIngredient1: UIButton!
     @IBOutlet weak var btnIngredient2: UIButton!
     @IBOutlet weak var btnIngredient3: UIButton!
     @IBOutlet weak var btnIngredient4: UIButton!
     @IBOutlet weak var btnIngredient5: UIButton!
     
+    @IBOutlet weak var imageCurrentIngredient: UIImageView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //        setupData01()
-                setupData02()
-        //        setupData03()
+              //  setupData02()
+
     }
     
+    //화면 가로로 설정
     override var shouldAutorotate: Bool{
         return true
     }
@@ -43,15 +58,6 @@ class ViewController: UIViewController {
     }
     
 
-    /// 1. 데이터가 순서대로 나타나는 경우
-    private func setupData01() {
-        // 0 -> 100 으로 오름차순으로 숫자를 print 한다.
-        ascendingNumber()
-        
-        // 100 -> 0 으로 내림차순으로 숫자를 print 한다.
-        descendingNumber()
-    }
-    
     /// 2. 데이터가 섞여서 나타나는 경우
     private func setupData02() {
         
@@ -96,6 +102,75 @@ class ViewController: UIViewController {
         }
     }
     
+    //현재 재료 선택
+    @IBAction func btnIngredient1(_ sender: Any) {
+        imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient5")
+        selectedIngredient = ingredientArray[0]
+    }
+    
+    @IBAction func btnIngredient2(_ sender: Any) {
+        imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient1")
+        selectedIngredient = ingredientArray[1]
+    }
+    @IBAction func btnIngredient3(_ sender: Any) {
+        imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient3")
+        selectedIngredient = ingredientArray[2]
+    }
+    @IBAction func btnIngredient4(_ sender: Any) {
+        imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient2")
+        selectedIngredient = ingredientArray[3]
+    }
+    @IBAction func btnIngredient5(_ sender: Any) {
+        imageCurrentIngredient.image = #imageLiteral(resourceName: "ingredient4")
+        selectedIngredient = ingredientArray[4]
+    }
+    
+    
+    //라면 냄비 클릭 쓰레드 생성
+    @IBAction func btnRamen1(_ sender: Any) {
+        //btnRamen1.setImage(self.ramenImage[0], for: .normal)
+        if(selectedIngredient == "물" && ramenState[0] == "시작"){
+            ramenState[0] = "물"
+            self.btnRamen1.setImage(self.ramenImage[1], for: .normal)
+            
+            DispatchQueue.global(qos: .userInitiated).async {
+                for _ in 0...10 {
+                    if(self.selectedIngredient == "스프" && self.ramenState[0] == "물"){
+                        self.ramenState[0] = "스프"
+                        DispatchQueue.main.sync {
+                            self.btnRamen1.setImage(self.ramenImage[2], for: .normal)
+                        }
+                    }
+                    else if(self.selectedIngredient == "면" && self.ramenState[0] == "스프"){
+                        self.ramenState[0] = "면"
+                        DispatchQueue.main.sync {
+                            self.btnRamen1.setImage(self.ramenImage[3], for: .normal)
+                        }
+                    }
+                    else if(self.selectedIngredient == "파" && self.ramenState[0] == "면"){
+                        self.ramenState[0] = "파"
+                        DispatchQueue.main.sync {
+                            self.btnRamen1.setImage(self.ramenImage[4], for: .normal)
+                        }
+                    }
+                    else if(self.selectedIngredient == "계란" && self.ramenState[0] == "파"){
+                        self.ramenState[0] = "계란"
+                        DispatchQueue.main.sync {
+                            self.btnRamen1.setImage(self.ramenImage[5], for: .normal)
+                        }
+                    }
+                    usleep(1000000)
+                }
+                DispatchQueue.main.sync {
+                    self.btnRamen1.setImage(self.ramenImage[6], for: .normal)
+                }
+            }
+        }
+    }
+    
+    
+    
+    /*
     /// 3. 공유자원의 문제
     private func setupData03() {
         
@@ -139,7 +214,7 @@ class ViewController: UIViewController {
             print("🍗  ",i)
             usleep(100000)
         }
-    }
+    }*/
     
 
 }
