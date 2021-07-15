@@ -1,7 +1,8 @@
 # Week3_AccountBook
 
 ⭐️ 가계부 앱 📕
-직관적으로 수입과 지출을 관리하고 통계를 조회할 수 있는 앱
+
+:직관적으로 수입과 지출을 관리하고 통계를 조회할 수 있는 앱
 UITableView를 활용 및 CRUD 기능을 구현
 
 📌 화면 구성
@@ -30,6 +31,7 @@ UITableView를 활용 및 CRUD 기능을 구현
  
 
 📌 사용한 개념들
+
 UITableView, UINavigationBar, Tab Bar Controller, UIPickerView, UISegmentedControll, Charts 라이브러리(PieChartView, BarChartView)
 
 📌 실행 영상
