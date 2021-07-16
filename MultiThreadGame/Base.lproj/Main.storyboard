@@ -43,7 +43,7 @@
                                     <action selector="btnIngredient5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEJ-WX-wBR"/>
                                 </connections>
                             </button>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IXW-TF-CgU">
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="IXW-TF-CgU">
                                 <rect key="frame" x="437" y="91" width="172" height="4"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="progressTintColor" red="0.87048214670000001" green="0.16287395360000001" blue="0.51388436559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -126,6 +126,7 @@
                         <outlet property="imageCurrentIngredient" destination="e5g-cY-p3b" id="jaD-sT-e41"/>
                         <outlet property="imageResult" destination="e8L-45-a35" id="Y9m-Vf-H6t"/>
                         <outlet property="labelScore" destination="cPx-p2-HJj" id="n1g-Al-tPE"/>
+                        <outlet property="progressView" destination="IXW-TF-CgU" id="Hwu-QV-WuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

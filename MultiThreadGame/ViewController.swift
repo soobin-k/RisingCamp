@@ -29,8 +29,15 @@ class ViewController: UIViewController {
     var count:Int = 0
     var timerCounting:Bool = false
     
+    var mainTimer:Timer = Timer()
+    var mainCount:Int = 0
+    var mainTimerCounting:Bool = false
+    
     //현재 스코어
     var score = 0
+    
+    //프로그래스 뷰
+    @IBOutlet weak var progressView: UIProgressView!
     
     //라면 냄비 버튼
     @IBOutlet weak var btnRamen1: UIButton!
@@ -56,7 +63,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        mainLoop()
     }
     
     //화면 가로로 설정
@@ -95,6 +107,33 @@ class ViewController: UIViewController {
         selectedIngredient = ingredientArray[5]
     }
     
+    //메인 타이머 카운터
+    @objc func mainTimerCounter() -> Void
+        {
+            mainCount = mainCount + 1
+            
+            if(mainCount<=60){
+                print("⏳ 남은 게임 시간 : " + String(mainCount) + "초")
+                progressView.setProgress(progressView.progress - 0.0167, animated: true)
+            }
+            else{
+                mainTimer.invalidate()
+                mainTimerCounting = false
+                print("😇 게임 종료")
+            }
+    }
+    
+    //메인 루프
+    func mainLoop(){
+        mainTimerCounting = true
+        let runLoop = RunLoop.current
+        mainTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(mainTimerCounter), userInfo: nil, repeats: true)
+        
+        while mainTimerCounting{
+            runLoop.run(until: Date().addingTimeInterval(0.1))
+        }
+    }
+    
     // 라면 냄비 카운터
     @objc func timerCounter() -> Void
     {
@@ -113,10 +152,9 @@ class ViewController: UIViewController {
             print("⏰ 타이머 종료")
             count = 0
         }
-        
-        
     }
-    
+        
+        
     //라면 냄비 클릭 쓰레드 생성
     @IBAction func btnRamen1(_ sender: Any) {
         //btnRamen1.setImage(self.ramenImage[0], for: .normal)
@@ -165,7 +203,8 @@ class ViewController: UIViewController {
                 
                     self.btnRamen1.setImage(self.ramenImage[5], for: .normal)
                 
-            }else if(self.ramenState[0] == "계란"){
+            }
+            else if(self.ramenState[0] == "계란"){
                 timer.invalidate()
                 timerCounting = false
                 print("⏰ 타이머 종료")
@@ -177,9 +216,28 @@ class ViewController: UIViewController {
                 score += 1000
                 labelScore.text = String(score)
             }
+            else{
+                self.showToast(message: "조리 순서가 틀렸습니다.")
+            }
         }
     }
     
+    func showToast(message : String, font: UIFont = UIFont.systemFont(ofSize: 14.0)){
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds = true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: { toastLabel.alpha = 0.0 }, completion: {(isCompleted) in toastLabel.removeFromSuperview()})
+        
+    }
+
+   
     /*
     else{
         let alert = UIAlertController(title: "경고", message: "조리 순서가 맞지 않습니다.", preferredStyle: UIAlertController.Style.alert)
