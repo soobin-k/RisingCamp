@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C31CE92226A1DC4D005C67B9 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31CE92126A1DC4D005C67B9 /* GameOverViewController.swift */; };
 		C3A72B8B269C0E3E00ABFE09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A72B8A269C0E3E00ABFE09 /* AppDelegate.swift */; };
 		C3A72B8D269C0E3E00ABFE09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A72B8C269C0E3E00ABFE09 /* SceneDelegate.swift */; };
 		C3A72B8F269C0E3E00ABFE09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A72B8E269C0E3E00ABFE09 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C31CE92126A1DC4D005C67B9 /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		C3A72B87269C0E3E00ABFE09 /* MultiThreadGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiThreadGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3A72B8A269C0E3E00ABFE09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3A72B8C269C0E3E00ABFE09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				C3A72B93269C0E3E00ABFE09 /* Assets.xcassets */,
 				C3A72B95269C0E3E00ABFE09 /* LaunchScreen.storyboard */,
 				C3A72B98269C0E3E00ABFE09 /* Info.plist */,
+				C31CE92126A1DC4D005C67B9 /* GameOverViewController.swift */,
 			);
 			path = MultiThreadGame;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C31CE92226A1DC4D005C67B9 /* GameOverViewController.swift in Sources */,
 				C3A72B8F269C0E3E00ABFE09 /* ViewController.swift in Sources */,
 				C3A72B8B269C0E3E00ABFE09 /* AppDelegate.swift in Sources */,
 				C3A72B8D269C0E3E00ABFE09 /* SceneDelegate.swift in Sources */,

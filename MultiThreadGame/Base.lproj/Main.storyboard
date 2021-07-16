@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_edit" translatesAutoresizingMaskIntoConstraints="NO" id="Gwb-xV-HzH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background_main" translatesAutoresizingMaskIntoConstraints="NO" id="Gwb-xV-HzH">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3sP-2x-odG">
@@ -71,6 +71,9 @@
                                 <rect key="frame" x="295" y="205" width="157" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ramen1"/>
+                                <connections>
+                                    <action selector="btnRamen2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7FH-Pp-Fp1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fny-Lp-PvI">
                                 <rect key="frame" x="140" y="20" width="116" height="77"/>
@@ -103,6 +106,18 @@
                                 <rect key="frame" x="591" y="259" width="157" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramen1" translatesAutoresizingMaskIntoConstraints="NO" id="EMU-ic-7Bt">
+                                <rect key="frame" x="448" y="39" width="53" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramen1" translatesAutoresizingMaskIntoConstraints="NO" id="240-5R-en4">
+                                <rect key="frame" x="509" y="39" width="53" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ramen1" translatesAutoresizingMaskIntoConstraints="NO" id="TPa-Bo-5Hz">
+                                <rect key="frame" x="570" y="39" width="53" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -133,14 +148,89 @@
             </objects>
             <point key="canvasLocation" x="12.723214285714285" y="140.57971014492756"/>
         </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="d7M-rx-KFZ">
+            <objects>
+                <viewController storyboardIdentifier="GameOverViewController" id="egP-Lv-rsv" customClass="GameOverViewController" customModule="MultiThreadGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7oZ-1m-GsG">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fail" translatesAutoresizingMaskIntoConstraints="NO" id="vYP-aE-yMx">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWM-xI-OOV">
+                                <rect key="frame" x="10" y="10" width="103" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="income" translatesAutoresizingMaskIntoConstraints="NO" id="JR1-Df-Ypn">
+                                <rect key="frame" x="526" y="100" width="119" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Snd-UD-wTy">
+                                <rect key="frame" x="534" y="159" width="103" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVi-ct-W8D">
+                                <rect key="frame" x="210" y="93" width="151" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="newGame"/>
+                                <connections>
+                                    <action selector="btnNewGame:" destination="egP-Lv-rsv" eventType="touchUpInside" id="cU4-h2-z7g"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rkf-j3-4Kk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="vYP-aE-yMx" secondAttribute="bottom" id="3iv-nz-Ryk"/>
+                            <constraint firstItem="vYP-aE-yMx" firstAttribute="top" secondItem="rkf-j3-4Kk" secondAttribute="top" id="Ri4-5l-cuV"/>
+                            <constraint firstItem="vYP-aE-yMx" firstAttribute="leading" secondItem="7oZ-1m-GsG" secondAttribute="leading" id="uOW-Oq-oBA"/>
+                            <constraint firstAttribute="trailing" secondItem="vYP-aE-yMx" secondAttribute="trailing" id="upj-7P-a8a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnNewGame" destination="YVi-ct-W8D" id="XNd-8i-oKb"/>
+                        <outlet property="imageBackground" destination="vYP-aE-yMx" id="NMw-aG-FN8"/>
+                        <outlet property="labelScore" destination="Snd-UD-wTy" id="34i-eI-BOj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPE-qF-pul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="735.9375" y="140.57971014492756"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="I2Y-gz-6d5">
+            <objects>
+                <viewController id="SrI-lf-1X7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kWa-pj-4ds">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2GI-LS-fw1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMY-2u-g9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-660" y="141"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="background_edit" width="1220" height="779"/>
+        <image name="background_main" width="1220" height="779"/>
+        <image name="fail" width="800" height="570"/>
+        <image name="income" width="246" height="203"/>
         <image name="ingredient1" width="219" height="136"/>
         <image name="ingredient2" width="279" height="122"/>
         <image name="ingredient3" width="204" height="106"/>
         <image name="ingredient4" width="227" height="112"/>
         <image name="ingredient5" width="366" height="404"/>
+        <image name="newGame" width="151" height="75"/>
         <image name="ramen1" width="285" height="180"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
