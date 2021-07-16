@@ -61,11 +61,17 @@
                                 <rect key="frame" x="258" y="292" width="157" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ramen1"/>
+                                <connections>
+                                    <action selector="btnRamen4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UDT-l4-fr8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMN-ak-dUv">
                                 <rect key="frame" x="107" y="292" width="157" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ramen1"/>
+                                <connections>
+                                    <action selector="btnRamen3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I2I-QW-ozV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ui0-24-7us">
                                 <rect key="frame" x="295" y="205" width="157" height="101"/>
@@ -139,6 +145,9 @@
                         <outlet property="btnRamen3" destination="BMN-ak-dUv" id="2pq-WO-OBe"/>
                         <outlet property="btnRamen4" destination="Qqw-FM-v2N" id="7aP-kL-RHT"/>
                         <outlet property="imageCurrentIngredient" destination="e5g-cY-p3b" id="jaD-sT-e41"/>
+                        <outlet property="imageHeart1" destination="EMU-ic-7Bt" id="OaC-gJ-rZm"/>
+                        <outlet property="imageHeart2" destination="240-5R-en4" id="vf3-94-gpp"/>
+                        <outlet property="imageHeart3" destination="TPa-Bo-5Hz" id="TAY-Z0-bQJ"/>
                         <outlet property="imageResult" destination="e8L-45-a35" id="Y9m-Vf-H6t"/>
                         <outlet property="labelScore" destination="cPx-p2-HJj" id="n1g-Al-tPE"/>
                         <outlet property="progressView" destination="IXW-TF-CgU" id="Hwu-QV-WuV"/>
@@ -204,21 +213,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xPE-qF-pul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="735.9375" y="140.57971014492756"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="I2Y-gz-6d5">
-            <objects>
-                <viewController id="SrI-lf-1X7" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kWa-pj-4ds">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="2GI-LS-fw1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YMY-2u-g9p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-660" y="141"/>
         </scene>
     </scenes>
     <resources>
