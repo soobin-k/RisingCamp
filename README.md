@@ -2,6 +2,10 @@
 
 ⭐️ 주문 앱
 
+[![iOS 생명주기를 활용한 주문 앱 만들기](https://img.youtube.com/vi/rBZBH8WjY10/0.jpg)](https://youtu.be/rBZBH8WjY10?t=0s)
+
+⬆️⬆️⬆️실행 영상(유튜브 링크)⬆️⬆️⬆️
+
 : 생명주기를 활용하여 간단한 햄버거 주문 앱 만들기
 CRUD 기능, 화면전환 및 데이터 주고 받기 포함
  
@@ -32,6 +36,6 @@ CRUD 기능, 화면전환 및 데이터 주고 받기 포함
 
 UIStackView, UIStepper, Singleton 패턴, View Controller 생명주기( ViewWillAppear, ViewWillDisappear, ViewDidLoad)
 
-📌 실행 영상
+📌 블로그 포스팅
 
 https://chobikim.tistory.com/30
