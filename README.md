@@ -2,6 +2,8 @@
 
 ⭐️ 가계부 앱 📕
 
+![스크린샷 2021-07-09 오후 8 13 57](https://user-images.githubusercontent.com/77331348/126071015-89e8db8f-9163-43dc-aedc-2c743b6afaed.png)
+
 : 직관적으로 수입과 지출을 관리하고 통계를 조회할 수 있는 앱
 UITableView를 활용 및 CRUD 기능을 구현
 
