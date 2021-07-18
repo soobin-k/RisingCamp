@@ -48,6 +48,6 @@ ii) 10초가 지나면 탄 냄비 출력 후 쓰레드 종료
 : DispatchQueue, Timer, ToastMessage
 
 
-📌 실행 영상
+📌 블로그 포스팅
 
 https://chobikim.tistory.com/33
