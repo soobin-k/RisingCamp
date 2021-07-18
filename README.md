@@ -2,7 +2,9 @@
 
  ️⭐️ 주제: 슈의 라면 게임👩🏻‍🍳🍜
  
- ![스크린샷 2021-07-18 오후 11 08 31](https://user-images.githubusercontent.com/77331348/126070840-64012a0a-1892-4554-be71-4630604f3b6c.png)
+[![iOS 쓰레드를 활용한 게임 만들기](https://img.youtube.com/vi/Yi7HfWCyEdE/0.jpg)](https://youtu.be/Yi7HfWCyEdE?t=0s)
+
+⬆️⬆️⬆️실행 영상(유튜브 링크)⬆️⬆️⬆️
 
 
 📌 간단한 게임 설명
