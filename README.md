@@ -39,7 +39,9 @@ i) 라면을 손님에게 제출하면 쓰레드 종료
 ii) 10초가 지나면 탄 냄비 출력 후 쓰레드 종료
 
 📌 사용 개념
-DispatchQueue, Timer, ToastMessage
+
+: DispatchQueue, Timer, ToastMessage
 
 📌 실행 영상
+
 https://chobikim.tistory.com/33
