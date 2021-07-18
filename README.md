@@ -6,10 +6,12 @@
  
 [![에이블리 UI 구성해보기](https://img.youtube.com/vi/adsQ0Cs6fXo/0.jpg)](https://youtu.be/adsQ0Cs6fXo?t=0s)
 
+⬆️⬆️⬆️유튜브 링크⬆️⬆️⬆️
+
 📌 사용한 프로덕트
 
 : UIButton, UIImageView, UILabel, UISearchBar, UISrollView, UIStackView, TabBarController 
 
-📌 실행 영상
+📌 블로그 포스팅
 
 https://chobikim.tistory.com/24
