@@ -36,7 +36,7 @@ class ListViewController: UIViewController{
 extension ListViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(String(lists.count) + " 줄")
-        return 5
+        return lists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,11 +45,11 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate{
         }
         
         //cell.cellMovieName.text = "\(indexPath.row)번째 데이터 입니다."
-        //let list = lists[indexPath.row]
+        let list = lists[indexPath.row]
         //print(list)
         //print(list["title"].stringValue)
-        //cell.cellMovieName.text = list["title"].stringValue
-        cell.cellMovieName.text = "tnqlqs"
+        cell.cellMovieName.text = list["title"].stringValue
+        //cell.cellMovieName.text = "tnqlqs"
         cell.cellMovieImage.image = #imageLiteral(resourceName: "Play")
         return cell
     }
