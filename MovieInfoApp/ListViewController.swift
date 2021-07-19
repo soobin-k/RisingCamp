@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SDWebImage
 
 class ListViewController: UIViewController{
     
@@ -50,7 +51,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate{
         //print(list["title"].stringValue)
         cell.cellMovieName.text = list["title"].stringValue
         //cell.cellMovieName.text = "tnqlqs"
-        cell.cellMovieImage.image = #imageLiteral(resourceName: "Play")
+        cell.cellMovieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + list["poster_path"].stringValue), completed: nil)
         return cell
     }
     

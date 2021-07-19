@@ -8,6 +8,7 @@ target 'MovieInfoApp' do
   pod 'KakaoSDKAuth'  # 카카오 로그인
   pod 'KakaoSDKUser'
   pod 'SwiftyJSON'
+  pod 'SDWebImage'
   # Pods for MovieInfoApp
 
 end
