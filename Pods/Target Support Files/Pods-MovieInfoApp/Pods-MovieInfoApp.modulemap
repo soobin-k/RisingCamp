@@ -1,0 +1,6 @@
+framework module Pods_MovieInfoApp {
+  umbrella header "Pods-MovieInfoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
