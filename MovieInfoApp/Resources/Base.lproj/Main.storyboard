@@ -66,7 +66,6 @@
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jud-JG-MxL" customClass="ButtonBarView" customModule="XLPagerTabStrip">
                                 <rect key="frame" x="0.0" y="88" width="414" height="67"/>
-                                <color key="backgroundColor" red="0.95773547889999999" green="0.74670284990000002" blue="0.82679516080000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="OtU-Tr-yJI"/>
                                 </constraints>
