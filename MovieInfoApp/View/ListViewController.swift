@@ -10,12 +10,14 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 import SDWebImage
+import XLPagerTabStrip
 
-class ListViewController: UIViewController{
+class ListViewController: UIViewController, IndicatorInfoProvider{
     
     @IBOutlet weak var tableView: UITableView!
     
     private var lists: [JSON] = []
+    //var childNumber: String = ""
     let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1"
     
     override func viewDidLoad() {
@@ -28,9 +30,17 @@ class ListViewController: UIViewController{
         
         tableView.reloadData()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getMovieList2()
+    }
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        return IndicatorInfo(title: "One")
     }
 }
 
