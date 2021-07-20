@@ -15,6 +15,7 @@ PODS:
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
   - SwiftyJSON (5.0.1)
+  - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - KakaoSDKAuth
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - KakaoSDKUser
   - SDWebImage
   - SwiftyJSON
+  - XLPagerTabStrip (~> 9.0)
 
 SPEC REPOS:
   trunk:
@@ -31,6 +33,7 @@ SPEC REPOS:
     - KakaoSDKUser
     - SDWebImage
     - SwiftyJSON
+    - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
@@ -39,7 +42,8 @@ SPEC CHECKSUMS:
   KakaoSDKUser: 7bb1c38bbd4608bd4e7eebbd4eda130338364fb3
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: bf9d824ebcfa529a193f208c03bce27e42a33e74
+PODFILE CHECKSUM: 81022a97f915ba180ee3912c6b422a9f68fced89
 
 COCOAPODS: 1.10.1

@@ -9,6 +9,7 @@ target 'MovieInfoApp' do
   pod 'KakaoSDKUser'
   pod 'SwiftyJSON'
   pod 'SDWebImage'
+  pod 'XLPagerTabStrip', '~> 9.0'
   # Pods for MovieInfoApp
 
 end
