@@ -51,12 +51,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1112" y="116"/>
+            <point key="canvasLocation" x="-294" y="-117"/>
         </scene>
         <!--영화 뭐보지?-->
         <scene sceneID="l90-b9-WTI">
             <objects>
-                <viewController id="t1P-gG-I8M" customClass="TopTabBarViewController" customModule="MovieInfoApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopTabBarViewController" id="t1P-gG-I8M" customClass="TopTabBarViewController" customModule="MovieInfoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vfk-pE-giz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ogf-d8-HNX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="615"/>
+            <point key="canvasLocation" x="2109" y="263"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="KPd-2f-8j7">
@@ -196,12 +196,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w6L-VB-tA8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2408.695652173913" y="-97.098214285714278"/>
+            <point key="canvasLocation" x="2109" y="-453"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FXx-k7-u9c">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f0i-9D-Ru4" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" automaticallyAdjustsScrollViewInsets="NO" id="f0i-9D-Ru4" customClass="NavigationController" customModule="MovieInfoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="no4-4i-yud">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -214,7 +214,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAu-zz-frj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476.81159420289856" y="-116.51785714285714"/>
+            <point key="canvasLocation" x="514" y="-117"/>
         </scene>
     </scenes>
     <resources>

@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         }
         
         // 다음 컨트롤러에 대한 인스턴스 생성
-        guard let vc = storyboard?.instantiateViewController(withIdentifier: "ListViewController") as? ListViewController else { return }
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "TopTabBarViewController") as? TopTabBarViewController else { return }
     
         vc.modalPresentationStyle = .fullScreen
         // 화면을 전환하다.

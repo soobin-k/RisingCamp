@@ -19,6 +19,7 @@
 		C3AA040626A5CD2D000F9311 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA040526A5CD2D000F9311 /* MovieVO.swift */; };
 		C3E007EA26A7112100DC58A8 /* TopTapBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E007E926A7112100DC58A8 /* TopTapBarViewController.swift */; };
 		C3E007EC26A712AD00DC58A8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E007EB26A712AD00DC58A8 /* SearchViewController.swift */; };
+		C3FC17AB26A74917005FCE19 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC17AA26A74917005FCE19 /* UserVO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C3AA040526A5CD2D000F9311 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
 		C3E007E926A7112100DC58A8 /* TopTapBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTapBarViewController.swift; sourceTree = "<group>"; };
 		C3E007EB26A712AD00DC58A8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C3FC17AA26A74917005FCE19 /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				C3AA040526A5CD2D000F9311 /* MovieVO.swift */,
+				C3FC17AA26A74917005FCE19 /* UserVO.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				C3E007EA26A7112100DC58A8 /* TopTapBarViewController.swift in Sources */,
 				C3AA040426A56127000F9311 /* MovieCell.swift in Sources */,
 				C3AA040226A55AFC000F9311 /* ListViewController.swift in Sources */,
+				C3FC17AB26A74917005FCE19 /* UserVO.swift in Sources */,
 				C3591EF526A48F1D00DA6CF7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
