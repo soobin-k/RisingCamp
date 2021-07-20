@@ -90,20 +90,60 @@
 		C3591EF126A48F1D00DA6CF7 /* MovieInfoApp */ = {
 			isa = PBXGroup;
 			children = (
-				C3AA040126A55AFC000F9311 /* ListViewController.swift */,
-				C3591EF626A48F1D00DA6CF7 /* ViewController.swift */,
-				C3E007E926A7112100DC58A8 /* TopTapBarViewController.swift */,
+				C3E007EF26A725B100DC58A8 /* Sources */,
+				C3E007EE26A7257300DC58A8 /* Resources */,
+				C3591F0026A48F1D00DA6CF7 /* Info.plist */,
+			);
+			path = MovieInfoApp;
+			sourceTree = "<group>";
+		};
+		C3E007ED26A7249600DC58A8 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
 				C3E007EB26A712AD00DC58A8 /* SearchViewController.swift */,
+				C3E007E926A7112100DC58A8 /* TopTapBarViewController.swift */,
+				C3591EF626A48F1D00DA6CF7 /* ViewController.swift */,
+				C3AA040126A55AFC000F9311 /* ListViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		C3E007EE26A7257300DC58A8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C3591EFB26A48F1D00DA6CF7 /* Assets.xcassets */,
 				C3591EF226A48F1D00DA6CF7 /* AppDelegate.swift */,
 				C3591EF426A48F1D00DA6CF7 /* SceneDelegate.swift */,
 				C3591EF826A48F1D00DA6CF7 /* Main.storyboard */,
-				C3591EFB26A48F1D00DA6CF7 /* Assets.xcassets */,
 				C3591EFD26A48F1D00DA6CF7 /* LaunchScreen.storyboard */,
-				C3591F0026A48F1D00DA6CF7 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C3E007EF26A725B100DC58A8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C3E007F126A7262500DC58A8 /* Class */,
+				C3E007F026A725E800DC58A8 /* Cells */,
+				C3E007ED26A7249600DC58A8 /* VCs */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C3E007F026A725E800DC58A8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				C3AA040326A56127000F9311 /* MovieCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C3E007F126A7262500DC58A8 /* Class */ = {
+			isa = PBXGroup;
+			children = (
 				C3AA040526A5CD2D000F9311 /* MovieVO.swift */,
 			);
-			path = MovieInfoApp;
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
