@@ -33,13 +33,13 @@ class TopTabBarViewController: ButtonBarPagerTabStripViewController{
         settings.style.buttonBarRightContentInset = 0
 
         settings.style.selectedBarHeight = 3.0
-        settings.style.selectedBarBackgroundColor = .orange
+        settings.style.selectedBarBackgroundColor = .systemPink
         
         // Changing item text color on swipe
         changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = .gray
-            newCell?.label.textColor = .orange
+            newCell?.label.textColor = .systemPink
         }
     }
     
