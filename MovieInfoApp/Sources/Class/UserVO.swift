@@ -6,6 +6,6 @@
 //
 
 import Foundation
-class UserVO {
+class UserVO  {
     
 }
