@@ -7,6 +7,9 @@
 
 import UIKit
 import MSPeekCollectionViewDelegateImplementation
+import SDWebImage
+import Alamofire
+import SwiftyJSON
 
 class MovieListCell: UITableViewCell {
     @IBOutlet weak var movielListTitle: UILabel!
@@ -14,13 +17,15 @@ class MovieListCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let behavior = MSCollectionViewPeekingBehavior()
+    private var lists: [JSON] = []
+    let movieVO = MovieVO.shared
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
-        
+       
         let cellNib = UINib(nibName: "MovieSingleCell", bundle: nil)
                 self.collectionView.register(cellNib, forCellWithReuseIdentifier: "MovieSingleCell")
         
@@ -28,6 +33,8 @@ class MovieListCell: UITableViewCell {
         behavior.cellPeekWidth = 17
         behavior.numberOfItemsToShow = 2
         collectionView.configureForPeekingBehavior(behavior: behavior)
+        
+        //getMovieList()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -40,7 +47,7 @@ class MovieListCell: UITableViewCell {
 
 extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return movieVO.upComing.count
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -51,9 +58,14 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
             /*
             cell.tagListView.removeAllTags()
             cell.tagListView.addTags(["Tag1","Tag2","Tag3"])*/
-            cell.movieImage.image = #imageLiteral(resourceName: "Play")
-            cell.movieTitle.text = "hi"
-            print(indexPath)
+           
+            cell.movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.upComing[indexPath[1]]["poster_path"].stringValue), completed: nil)
+                cell.movieTitle.text = movieVO.upComing[indexPath[1]]["title"].stringValue
+            print("영화 제목" + cell.movieTitle.text!)
+            
+            
+            cell.movieImage.layer.cornerRadius = 10
+            //print(indexPath[0])
             return cell
         }
         return UICollectionViewCell()
@@ -72,5 +84,19 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         behavior.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
     }
-    
+    /*
+    func getMovieList(){
+        AF.request(url).responseJSON { [self] (response) in
+            if let value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
+                let json = JSON(value)
+                self.lists = json["results"].arrayValue //배열 값이다.
+                //print(lists)
+                
+                movieVO.upComing = lists
+                
+            }
+            
+        }
+        collectionView.reloadData()
+    }*/
 }

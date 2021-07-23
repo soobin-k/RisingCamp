@@ -8,18 +8,19 @@ import UIKit
 import KakaoSDKAuth
 import KakaoSDKUser
 import Alamofire
-
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageProfile: UIImageView!
     
     @IBOutlet weak var labelProfile: UILabel!
-    
+    let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1"
+    private var lists: [JSON] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        getMovieList()
     }
 
     @IBAction func btnLogin(_ sender: Any) {
@@ -78,6 +79,18 @@ class ViewController: UIViewController {
         
         
     }
-    
+    func getMovieList(){
+        AF.request(url).responseJSON { [self] (response) in
+            if let value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
+                let json = JSON(value)
+                self.lists = json["results"].arrayValue //배열 값이다.
+                //print(lists)
+                let MovieVO = MovieVO.shared
+                MovieVO.upComing = lists
+                //self.tableView.reloadData()
+            }
+            
+        }
+    }
 }
 

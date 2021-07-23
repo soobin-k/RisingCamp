@@ -22,6 +22,7 @@
 		C3AA040226A55AFC000F9311 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA040126A55AFC000F9311 /* ListViewController.swift */; };
 		C3AA040426A56127000F9311 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA040326A56127000F9311 /* MovieCell.swift */; };
 		C3AA040626A5CD2D000F9311 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA040526A5CD2D000F9311 /* MovieVO.swift */; };
+		C3DA7E9826AB183500BCB35E /* BookVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA7E9726AB183500BCB35E /* BookVO.swift */; };
 		C3E007EA26A7112100DC58A8 /* TopTapBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E007E926A7112100DC58A8 /* TopTapBarViewController.swift */; };
 		C3E007EC26A712AD00DC58A8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E007EB26A712AD00DC58A8 /* SearchViewController.swift */; };
 		C3FC17AB26A74917005FCE19 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC17AA26A74917005FCE19 /* UserVO.swift */; };
@@ -50,6 +51,7 @@
 		C3AA040126A55AFC000F9311 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C3AA040326A56127000F9311 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		C3AA040526A5CD2D000F9311 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
+		C3DA7E9726AB183500BCB35E /* BookVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVO.swift; sourceTree = "<group>"; };
 		C3E007E926A7112100DC58A8 /* TopTapBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTapBarViewController.swift; sourceTree = "<group>"; };
 		C3E007EB26A712AD00DC58A8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C3FC17AA26A74917005FCE19 /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			children = (
 				C3AA040526A5CD2D000F9311 /* MovieVO.swift */,
 				C3FC17AA26A74917005FCE19 /* UserVO.swift */,
+				C3DA7E9726AB183500BCB35E /* BookVO.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				C3177FBD26AA7AF300A92F45 /* MovieSingleCell.swift in Sources */,
 				C3177FC126AA806200A92F45 /* MovieListCell.swift in Sources */,
 				C3AA040626A5CD2D000F9311 /* MovieVO.swift in Sources */,
+				C3DA7E9826AB183500BCB35E /* BookVO.swift in Sources */,
 				C3E007EA26A7112100DC58A8 /* TopTapBarViewController.swift in Sources */,
 				C3FC17AD26A7612F005FCE19 /* TableViewCell.swift in Sources */,
 				C3AA040426A56127000F9311 /* MovieCell.swift in Sources */,
