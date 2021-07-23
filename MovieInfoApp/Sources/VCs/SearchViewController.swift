@@ -34,7 +34,7 @@ class SearchViewController: UIViewController, IndicatorInfoProvider {
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Two")
+        return IndicatorInfo(title: "마이페이지")
     }
 
 }

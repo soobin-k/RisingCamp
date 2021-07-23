@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageProfile: UIImageView!
     
     @IBOutlet weak var labelProfile: UILabel!
-    let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1"
+    let url: [String] = ["https://api.themoviedb.org/3/movie/upcoming?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1", "https://api.themoviedb.org/3/movie/now_playing?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1", "https://api.themoviedb.org/3/movie/popular?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1", "https://api.themoviedb.org/3/movie/top_rated?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1"]
     private var lists: [JSON] = []
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,21 +75,43 @@ class ViewController: UIViewController {
         //vc.modalPresentationStyle = .fullScreen
         // 화면을 전환하다.
         //present(vc, animated: true)
-        
-        
-        
     }
     func getMovieList(){
-        AF.request(url).responseJSON { [self] (response) in
+        AF.request(url[0]).responseJSON { [self] (response) in
             if let value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
                 let json = JSON(value)
                 self.lists = json["results"].arrayValue //배열 값이다.
-                //print(lists)
                 let MovieVO = MovieVO.shared
                 MovieVO.upComing = lists
-                //self.tableView.reloadData()
             }
-            
+        }
+        
+        AF.request(url[1]).responseJSON { [self] (response) in
+            if let value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
+                let json = JSON(value)
+                self.lists = json["results"].arrayValue //배열 값이다.
+                let MovieVO = MovieVO.shared
+                MovieVO.nowPlaying = lists
+            }
+        }
+        
+        AF.request(url[2]).responseJSON { [self] (response) in
+            if let value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
+                let json = JSON(value)
+                self.lists = json["results"].arrayValue //배열 값이다.
+                let MovieVO = MovieVO.shared
+                MovieVO.popular = lists
+                
+            }
+        }
+        
+        AF.request(url[3]).responseJSON { [self] (response) in
+            if let value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
+                let json = JSON(value)
+                self.lists = json["results"].arrayValue //배열 값이다.
+                let MovieVO = MovieVO.shared
+                MovieVO.topRated = lists
+            }
         }
     }
 }

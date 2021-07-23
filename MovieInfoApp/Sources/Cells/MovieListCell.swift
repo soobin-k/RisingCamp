@@ -58,9 +58,20 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
             /*
             cell.tagListView.removeAllTags()
             cell.tagListView.addTags(["Tag1","Tag2","Tag3"])*/
-           
-            cell.movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.upComing[indexPath[1]]["poster_path"].stringValue), completed: nil)
-                cell.movieTitle.text = movieVO.upComing[indexPath[1]]["title"].stringValue
+            if(movielListTitle.text == "Upcoming"){
+                cell.movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.upComing[indexPath[1]]["poster_path"].stringValue), completed: nil)
+                    cell.movieTitle.text = movieVO.upComing[indexPath[1]]["title"].stringValue
+            }else if(movielListTitle.text == "Now playing"){
+                cell.movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.nowPlaying[indexPath[1]]["poster_path"].stringValue), completed: nil)
+                    cell.movieTitle.text = movieVO.nowPlaying[indexPath[1]]["title"].stringValue
+            }else if(movielListTitle.text == "Popular"){
+                cell.movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.popular[indexPath[1]]["poster_path"].stringValue), completed: nil)
+                    cell.movieTitle.text = movieVO.popular[indexPath[1]]["title"].stringValue
+            }else{
+                cell.movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.topRated[indexPath[1]]["poster_path"].stringValue), completed: nil)
+                    cell.movieTitle.text = movieVO.topRated[indexPath[1]]["title"].stringValue
+            }
+            print(indexPath)
             print("영화 제목" + cell.movieTitle.text!)
             
             

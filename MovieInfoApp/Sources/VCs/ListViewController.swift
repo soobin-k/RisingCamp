@@ -16,16 +16,10 @@ class ListViewController: UIViewController, IndicatorInfoProvider{
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var lists: [JSON] = []
-   
-    let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupTableView()
-        //getMovieList()
-        //tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,29 +28,43 @@ class ListViewController: UIViewController, IndicatorInfoProvider{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //getMovieList()
-        //tableView.reloadData()
-        //getMovieList2()
+       
         tableView.reloadData()
         
     }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "One")
+        return IndicatorInfo(title: "영화 목록")
     }
 }
 
 extension ListViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //print(String(lists.count) + " 줄")
-        return 1
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCell") as? MovieListCell else{
             return UITableViewCell()
         }
-        
-        cell.movielListTitle.text = "인기"
+        switch indexPath.row {
+        case 0:
+            cell.movielListTitle.text = "Upcoming"
+            break
+        case 1:
+            cell.movielListTitle.text = "Now playing"
+            break
+        case 2:
+            cell.movielListTitle.text = "Popular"
+            break
+        case 3:
+            cell.movielListTitle.text = "Top Rated"
+            break
+        default:
+            print("없음")
+            break
+        }
+        //cell.movielListTitle.text = "인기"
         
         return cell
     }
@@ -84,17 +92,4 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate{
             self.tableView.register(categoryCellNib, forCellReuseIdentifier: "CategoryCell")*/
     }
     
-    func getMovieList(){
-        AF.request(url).responseJSON { [self] (response) in
-            if let value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
-                let json = JSON(value)
-                self.lists = json["results"].arrayValue //배열 값이다.
-                //print(lists)
-                let MovieVO = MovieVO.shared
-                MovieVO.upComing = lists
-                self.tableView.reloadData()
-            }
-            
-        }
-    }
 }
