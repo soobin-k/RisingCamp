@@ -1,8 +1,8 @@
 //
-//  ListViewController.swift
+//  TableViewController.swift
 //  MovieInfoApp
 //
-//  Created by 김수빈 on 2021/07/19.
+//  Created by 김수빈 on 2021/07/23.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ import SwiftyJSON
 import SDWebImage
 import XLPagerTabStrip
 
-class ListViewController: UIViewController, IndicatorInfoProvider{
+class TableViewController: UIViewController, IndicatorInfoProvider{
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,11 +24,10 @@ class ListViewController: UIViewController, IndicatorInfoProvider{
             super.viewDidLoad()
         
         // Delegate = self -> 제스쳐, UI
-        //tableView.delegate = self
+        tableView.delegate = self
         // DataSource = self -> 데이터관리
-        //tableView.dataSource = self
-        print("Load")
-        setupTableView()
+        tableView.dataSource = self
+        
         tableView.reloadData()
     }
     
@@ -38,27 +37,31 @@ class ListViewController: UIViewController, IndicatorInfoProvider{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.reloadData()
-        //getMovieList2()
+        getMovieList2()
     }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "One")
+        return IndicatorInfo(title: "Four")
     }
 }
 
-extension ListViewController: UITableViewDataSource, UITableViewDelegate{
+extension TableViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(String(lists.count) + " 줄")
-        return 1
+        return lists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListCell") as? MovieListCell else{
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell") as? MovieCell else{
             return UITableViewCell()
         }
         
-        cell.movielListTitle.text = "인기"
-        
+        //cell.cellMovieName.text = "\(indexPath.row)번째 데이터 입니다."
+        let list = lists[indexPath.row]
+        //print(list)
+        //print(list["title"].stringValue)
+        cell.cellMovieName.text = list["title"].stringValue
+        //cell.cellMovieName.text = "tnqlqs"
+        cell.cellMovieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + list["poster_path"].stringValue), completed: nil)
         return cell
     }
     
@@ -66,7 +69,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate{
         print("선택된 행은 \(indexPath.row) 입니다.")
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 282
+        return 125
     }
     /*
     func getMovieList(){
@@ -80,22 +83,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate{
                         print(json)
         }
     }*/
-    private func setupTableView(){
-            // Register the xib for tableview cell
-            tableView.delegate = self
-            tableView.dataSource = self
-            // #1
-            let curatingCellNib = UINib(nibName: "MovieListCell", bundle: nil)
-            self.tableView.register(curatingCellNib, forCellReuseIdentifier: "MovieListCell")
-            // #2 #3
-        /*
-            let newsLetterCellNib = UINib(nibName: "NewsLetterCell", bundle: nil)
-            self.tableView.register(newsLetterCellNib, forCellReuseIdentifier: "NewsLetterCell")
-            // #4
-            let categoryCellNib = UINib(nibName: "CategoryCell", bundle: nil)
-            self.tableView.register(categoryCellNib, forCellReuseIdentifier: "CategoryCell")*/
-    }
-    /*
+    
     func getMovieList2(){
         AF.request(url).responseJSON { [self] (response) in
             if var value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
@@ -106,5 +94,5 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate{
             }
             
         }
-    }*/
+    }
 }
