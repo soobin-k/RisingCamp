@@ -27,7 +27,7 @@ class ListViewController: UIViewController, IndicatorInfoProvider{
         //tableView.delegate = self
         // DataSource = self -> 데이터관리
         //tableView.dataSource = self
-        print("Load")
+        
         setupTableView()
         tableView.reloadData()
     }
