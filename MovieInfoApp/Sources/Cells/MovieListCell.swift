@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import MSPeekCollectionViewDelegateImplementation
 
 class MovieListCell: UITableViewCell {
     @IBOutlet weak var movielListTitle: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let behavior = MSCollectionViewPeekingBehavior()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +23,11 @@ class MovieListCell: UITableViewCell {
         
         let cellNib = UINib(nibName: "MovieSingleCell", bundle: nil)
                 self.collectionView.register(cellNib, forCellWithReuseIdentifier: "MovieSingleCell")
+        
+        behavior.cellSpacing = 8
+        behavior.cellPeekWidth = 17
+        behavior.numberOfItemsToShow = 2
+        collectionView.configureForPeekingBehavior(behavior: behavior)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -62,7 +70,7 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
+        behavior.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
     }
     
 }

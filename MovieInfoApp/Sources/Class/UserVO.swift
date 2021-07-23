@@ -6,6 +6,10 @@
 //
 
 import Foundation
-class UserVO  {
-    
+import UIKit
+
+class UserVO : NSObject {
+    static let shared = UserVO()
+    var userImage: UIImage = #imageLiteral(resourceName: "Play")
+    var userName: String = ""
 }

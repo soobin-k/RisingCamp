@@ -51,11 +51,16 @@ class ViewController: UIViewController {
                 print("me() success.")
                 //do something
                 _ = user
+                
+                //사용자 정보 저장
+                let UserVO = UserVO.shared
                 self.labelProfile.text = user?.kakaoAccount?.profile?.nickname
+                UserVO.userName = (user?.kakaoAccount?.profile?.nickname)!
                 
                 if let url = user?.kakaoAccount?.profile?.profileImageUrl,
                     let data = try? Data(contentsOf: url) {
                     self.imageProfile.image = UIImage(data: data)
+                    UserVO.userImage = UIImage(data: data)!
                 }
             }
         }

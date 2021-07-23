@@ -11,13 +11,16 @@ import XLPagerTabStrip
 
 class SearchViewController: UIViewController, IndicatorInfoProvider {
 
-
-    @IBOutlet weak var label: UILabel!
+    
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var userName: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        let UserVO = UserVO.shared
+        userName.text = UserVO.userName + "님"
+        userImage.image = UserVO.userImage
     }
 
     override func didReceiveMemoryWarning() {

@@ -10,6 +10,7 @@ target 'MovieInfoApp' do
   pod 'SwiftyJSON'
   pod 'SDWebImage'
   pod 'XLPagerTabStrip', '~> 9.0'
+  pod 'MSPeekCollectionViewDelegateImplementation'
   # Pods for MovieInfoApp
 
 end
