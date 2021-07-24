@@ -24,7 +24,7 @@ class TopTabBarViewController: ButtonBarPagerTabStripViewController{
         settings.style.buttonBarBackgroundColor = .white
         settings.style.buttonBarItemBackgroundColor = .white
 
-        settings.style.buttonBarItemFont = UIFont(name: "Helvetica", size: 16.0)!
+        settings.style.buttonBarItemFont = UIFont(name: "Helvetica", size: 17.0)!
         settings.style.buttonBarItemTitleColor = .gray
         
         settings.style.buttonBarMinimumLineSpacing = 0
@@ -33,13 +33,13 @@ class TopTabBarViewController: ButtonBarPagerTabStripViewController{
         settings.style.buttonBarRightContentInset = 0
 
         settings.style.selectedBarHeight = 3.0
-        settings.style.selectedBarBackgroundColor = .systemPink
+        settings.style.selectedBarBackgroundColor = .purple
         
         // Changing item text color on swipe
         changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.label.textColor = .gray
-            newCell?.label.textColor = .systemPink
+            newCell?.label.textColor = .purple
         }
     }
     
@@ -54,6 +54,6 @@ class TopTabBarViewController: ButtonBarPagerTabStripViewController{
         let child3 = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
 
         let child4 = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
-        return [child1, child2, child3, child4]
+        return [child1, child4, child3, child2]
     }
 }

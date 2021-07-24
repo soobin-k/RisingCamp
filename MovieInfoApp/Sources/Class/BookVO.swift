@@ -10,8 +10,8 @@ import UIKit
 
 //예매 내역
 class BookVO :NSObject{
+  static let shared = BookVO()
   var movieTitle: [String] = []// 영화 제목
-  var movieImage: [UIImage] = []
   var movieDate: [String] = []
 
 }

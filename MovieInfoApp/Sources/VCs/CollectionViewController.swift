@@ -16,10 +16,12 @@ class CollectionViewController: UIViewController, IndicatorInfoProvider, UIColle
     
     //받아온 데이터를 담을 변수를 생성
     
+    @IBOutlet weak var textSearch: UITextField!
     @IBOutlet weak var collectionView: UICollectionView!
     private var lists: [JSON] = []
 
-    let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1"
+    let url1 = "https://api.themoviedb.org/3/search/movie?api_key=12d1693e997e213480139d81b182e00d&query="
+    let url2 = "&page=1"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,16 +36,16 @@ class CollectionViewController: UIViewController, IndicatorInfoProvider, UIColle
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getMovieList2()
+        //getMovieList2()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Three")
+        return IndicatorInfo(title: "영화 검색")
     }
-    
+    /*
     func getMovieList2(){
         AF.request(url).responseJSON { [self] (response) in
             if var value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
@@ -54,7 +56,7 @@ class CollectionViewController: UIViewController, IndicatorInfoProvider, UIColle
             }
             
         }
-    }
+    }*/
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 가져온 데이터 개수
@@ -82,4 +84,16 @@ class CollectionViewController: UIViewController, IndicatorInfoProvider, UIColle
         return CGSize(width: width, height: width*1.5)
     }
 
+    @IBAction func btnSearch(_ sender: Any) {
+        let searchitem = textSearch.text
+        AF.request(url1 + searchitem! + url2).responseJSON { [self] (response) in
+            if let value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
+                let json = JSON(value)
+                self.lists = json["results"].arrayValue //배열 값이다.
+                //print(lists)
+                collectionView.reloadData()
+            }
+            
+        }
+    }
 }

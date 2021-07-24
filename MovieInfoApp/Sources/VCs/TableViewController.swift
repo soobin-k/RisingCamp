@@ -17,6 +17,7 @@ class TableViewController: UIViewController, IndicatorInfoProvider{
     @IBOutlet weak var tableView: UITableView!
     
     private var lists: [JSON] = []
+    var movieVO = MovieVO.shared
     //var childNumber: String = ""
     let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1"
     
@@ -40,7 +41,7 @@ class TableViewController: UIViewController, IndicatorInfoProvider{
         getMovieList2()
     }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
-        return IndicatorInfo(title: "Four")
+        return IndicatorInfo(title: "영화 예매")
     }
 }
 
@@ -67,6 +68,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("선택된 행은 \(indexPath.row) 입니다.")
+        movieVO.index = indexPath.row
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 125
@@ -95,4 +97,17 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
             
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segue_detail"{
+            let cell = sender as! MovieCell
+            
+            let path = self.tableView.indexPath(for: cell)
+            let detailVC = segue.destination as? DetailViewController
+            
+            //detailVC?.movie = movieVO.upComing[path!.row]
+            print(path!.row)
+        }
+    }
 }
+
+

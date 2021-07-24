@@ -4,14 +4,18 @@
 //
 //  Created by 김수빈 on 2021/07/23.
 //
-
+import Foundation
 import UIKit
 import MSPeekCollectionViewDelegateImplementation
 import SDWebImage
 import Alamofire
 import SwiftyJSON
 
-class MovieListCell: UITableViewCell {
+protocol myProtocol {
+    func loadNewScreen() -> Void;
+}
+
+class MovieListCell: UITableViewCell{
     @IBOutlet weak var movielListTitle: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -19,6 +23,7 @@ class MovieListCell: UITableViewCell {
     let behavior = MSCollectionViewPeekingBehavior()
     private var lists: [JSON] = []
     let movieVO = MovieVO.shared
+    var delegate: myProtocol!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,9 +60,7 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieSingleCell", for: indexPath) as? MovieSingleCell {
-            /*
-            cell.tagListView.removeAllTags()
-            cell.tagListView.addTags(["Tag1","Tag2","Tag3"])*/
+            
             if(movielListTitle.text == "Upcoming"){
                 cell.movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.upComing[indexPath[1]]["poster_path"].stringValue), completed: nil)
                     cell.movieTitle.text = movieVO.upComing[indexPath[1]]["title"].stringValue
@@ -71,12 +74,11 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
                 cell.movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.topRated[indexPath[1]]["poster_path"].stringValue), completed: nil)
                     cell.movieTitle.text = movieVO.topRated[indexPath[1]]["title"].stringValue
             }
-            print(indexPath)
-            print("영화 제목" + cell.movieTitle.text!)
             
+            //print("영화 제목" + cell.movieTitle.text!)
             
             cell.movieImage.layer.cornerRadius = 10
-            //print(indexPath[0])
+           
             return cell
         }
         return UICollectionViewCell()
@@ -86,15 +88,20 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
         return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        /*
-                let cell = collectionView.cellForItem(at: indexPath) as? MovieSingleCell
-                self.imageView?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)*/
+        
         print("콜렉션 뷰 " + String(indexPath.row))
+        //performSegue(withIdentifier: "segue_detail", sender: self)
+        /*
+        let vc = UIStoryboard(name: "Main", bundle: Bundle(for: DetailViewController.self)).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        self.present(vc, animated: false)*/
+        delegate?.loadNewScreen()
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         behavior.scrollViewWillEndDragging(scrollView, withVelocity: velocity, targetContentOffset: targetContentOffset)
     }
+    
     /*
     func getMovieList(){
         AF.request(url).responseJSON { [self] (response) in
@@ -111,3 +118,5 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
         collectionView.reloadData()
     }*/
 }
+
+

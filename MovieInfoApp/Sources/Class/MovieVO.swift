@@ -16,5 +16,5 @@ class MovieVO :NSObject{
   var nowPlaying: [JSON] = []
   var topRated: [JSON] = []
   var popular: [JSON] = []
- 
+  var index: Int = 0
 }

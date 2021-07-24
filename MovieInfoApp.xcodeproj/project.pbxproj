@@ -23,6 +23,9 @@
 		C3AA040426A56127000F9311 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA040326A56127000F9311 /* MovieCell.swift */; };
 		C3AA040626A5CD2D000F9311 /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AA040526A5CD2D000F9311 /* MovieVO.swift */; };
 		C3DA7E9826AB183500BCB35E /* BookVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA7E9726AB183500BCB35E /* BookVO.swift */; };
+		C3DA7E9A26AB443A00BCB35E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA7E9926AB443A00BCB35E /* DetailViewController.swift */; };
+		C3DA7E9E26AB67D500BCB35E /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA7E9D26AB67D500BCB35E /* BookViewController.swift */; };
+		C3DA7EA026AB75B500BCB35E /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DA7E9F26AB75B500BCB35E /* BookCell.swift */; };
 		C3E007EA26A7112100DC58A8 /* TopTapBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E007E926A7112100DC58A8 /* TopTapBarViewController.swift */; };
 		C3E007EC26A712AD00DC58A8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E007EB26A712AD00DC58A8 /* SearchViewController.swift */; };
 		C3FC17AB26A74917005FCE19 /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3FC17AA26A74917005FCE19 /* UserVO.swift */; };
@@ -52,6 +55,9 @@
 		C3AA040326A56127000F9311 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		C3AA040526A5CD2D000F9311 /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
 		C3DA7E9726AB183500BCB35E /* BookVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookVO.swift; sourceTree = "<group>"; };
+		C3DA7E9926AB443A00BCB35E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C3DA7E9D26AB67D500BCB35E /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
+		C3DA7E9F26AB75B500BCB35E /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		C3E007E926A7112100DC58A8 /* TopTapBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTapBarViewController.swift; sourceTree = "<group>"; };
 		C3E007EB26A712AD00DC58A8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C3FC17AA26A74917005FCE19 /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 				C3AA040126A55AFC000F9311 /* ListViewController.swift */,
 				C3FC17AE26A765B7005FCE19 /* CollectionViewController.swift */,
 				C3177FB426AA779F00A92F45 /* TableViewController.swift */,
+				C3DA7E9926AB443A00BCB35E /* DetailViewController.swift */,
+				C3DA7E9D26AB67D500BCB35E /* BookViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 				C3177FBC26AA7AF300A92F45 /* MovieSingleCell.xib */,
 				C3177FBF26AA806200A92F45 /* MovieListCell.swift */,
 				C3177FC026AA806200A92F45 /* MovieListCell.xib */,
+				C3DA7E9F26AB75B500BCB35E /* BookCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -293,10 +302,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3591EF726A48F1D00DA6CF7 /* ViewController.swift in Sources */,
+				C3DA7E9A26AB443A00BCB35E /* DetailViewController.swift in Sources */,
 				C3591EF326A48F1D00DA6CF7 /* AppDelegate.swift in Sources */,
 				C3177FB526AA779F00A92F45 /* TableViewController.swift in Sources */,
 				C3E007EC26A712AD00DC58A8 /* SearchViewController.swift in Sources */,
 				C3177FBD26AA7AF300A92F45 /* MovieSingleCell.swift in Sources */,
+				C3DA7EA026AB75B500BCB35E /* BookCell.swift in Sources */,
 				C3177FC126AA806200A92F45 /* MovieListCell.swift in Sources */,
 				C3AA040626A5CD2D000F9311 /* MovieVO.swift in Sources */,
 				C3DA7E9826AB183500BCB35E /* BookVO.swift in Sources */,
@@ -306,6 +317,7 @@
 				C3AA040226A55AFC000F9311 /* ListViewController.swift in Sources */,
 				C3FC17AB26A74917005FCE19 /* UserVO.swift in Sources */,
 				C3591EF526A48F1D00DA6CF7 /* SceneDelegate.swift in Sources */,
+				C3DA7E9E26AB67D500BCB35E /* BookViewController.swift in Sources */,
 				C3FC17AF26A765B7005FCE19 /* CollectionViewController.swift in Sources */,
 				C3FC17B126A765F6005FCE19 /* CollectionCell.swift in Sources */,
 			);
