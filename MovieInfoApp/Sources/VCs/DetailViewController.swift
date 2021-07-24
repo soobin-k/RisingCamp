@@ -25,11 +25,11 @@ class DetailViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(false)
         let index = movieVO.index
-        movieTitle.text = movieVO.upComing[index]["title"].stringValue
-        movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.upComing[index]["poster_path"].stringValue), completed: nil)
-        movieRelease.text = "출시일: " + movieVO.upComing[index]["release_date"].stringValue
-        movieOverview.text = movieVO.upComing[index]["overview"].stringValue
-        movieStar.text = "별점: " + movieVO.upComing[index]["vote_average"].stringValue + " / 10 점"
+        movieTitle.text = movieVO.nowPlaying[index]["title"].stringValue
+        movieImage.sd_setImage(with: URL(string: "https://image.tmdb.org/t/p/w500" + movieVO.nowPlaying[index]["poster_path"].stringValue), completed: nil)
+        movieRelease.text = "출시일: " + movieVO.nowPlaying[index]["release_date"].stringValue
+        movieOverview.text = movieVO.nowPlaying[index]["overview"].stringValue
+        movieStar.text = "별점: " + movieVO.nowPlaying[index]["vote_average"].stringValue + " / 10 점"
     }
     @IBAction func btnBook(_ sender: Any) {
        // print(self.movie)

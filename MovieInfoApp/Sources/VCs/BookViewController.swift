@@ -24,7 +24,7 @@ class BookViewController: UIViewController{
         stepper.wraps = true
         stepper.autorepeat = true
         stepper.maximumValue = 10
-        movieTitle.text = movieVO.upComing[movieVO.index]["title"].stringValue
+        movieTitle.text = movieVO.nowPlaying[movieVO.index]["title"].stringValue
         
     }
     override func viewWillDisappear(_ animated: Bool) {

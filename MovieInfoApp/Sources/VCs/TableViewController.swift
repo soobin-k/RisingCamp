@@ -19,7 +19,7 @@ class TableViewController: UIViewController, IndicatorInfoProvider{
     private var lists: [JSON] = []
     var movieVO = MovieVO.shared
     //var childNumber: String = ""
-    let url = "https://api.themoviedb.org/3/movie/upcoming?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1"
+    let url = "https://api.themoviedb.org/3/movie/now_playing?api_key=12d1693e997e213480139d81b182e00d&language=ko-KR&page=1"
     
     override func viewDidLoad() {
             super.viewDidLoad()
