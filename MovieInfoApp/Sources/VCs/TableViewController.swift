@@ -38,7 +38,7 @@ class TableViewController: UIViewController, IndicatorInfoProvider{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getMovieList2()
+        //getMovieList2()
     }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "영화 예매")
