@@ -69,6 +69,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("선택된 행은 \(indexPath.row) 입니다.")
         movieVO.index = indexPath.row
+        TableViewDataManager().getDataFromAPI(url: url, Controller: self)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 125
@@ -86,7 +87,7 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
         }
     }*/
     
-    func getMovieList2(){
+    public func getMovieList2(response: apiReponse){
         AF.request(url).responseJSON { [self] (response) in
             if var value = response.value{ // value가 옵셔널이 아니라면(값이 있다면) 변수를 대입해줘!
                 var json = JSON(value)
@@ -111,3 +112,29 @@ extension TableViewController: UITableViewDataSource, UITableViewDelegate{
 }
 
 
+class TableViewDataManager{
+    func getDataFromAPI(url: String, Controller: TableViewController){
+        //다시보기!!!
+        let header: HTTPHeaders = [
+            "email": "String"
+            
+        ]
+        AF.request(url, headers: header)
+            .responseDecodable(of: apiReponse.self){reponse in
+                switch reponse.result{
+                case .success(let response):
+                    Controller.getMovieList2(response: response)
+                    print(reponse)
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+                
+                
+            }
+    }
+}
+struct apiReponse: Decodable {
+    var isSuccess: Bool
+    var code: Int
+    var message: String
+}

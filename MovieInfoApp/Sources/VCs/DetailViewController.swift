@@ -35,3 +35,4 @@ class DetailViewController: UIViewController{
        // print(self.movie)
     }
 }
+

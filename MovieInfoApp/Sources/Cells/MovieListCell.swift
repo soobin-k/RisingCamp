@@ -11,8 +11,8 @@ import SDWebImage
 import Alamofire
 import SwiftyJSON
 
-protocol myProtocol {
-    func loadNewScreen() -> Void;
+protocol CollectionViewCellDelegate: AnyObject {
+    func collectionView(collectionviewcell: MovieSingleCell?, index: Int, didTappedInTableViewCell: MovieListCell)
 }
 
 class MovieListCell: UITableViewCell{
@@ -23,7 +23,8 @@ class MovieListCell: UITableViewCell{
     let behavior = MSCollectionViewPeekingBehavior()
     private var lists: [JSON] = []
     let movieVO = MovieVO.shared
-    var delegate: myProtocol!
+    //프로토콜
+    weak var cellDelegate: CollectionViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -78,7 +79,7 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
             //print("영화 제목" + cell.movieTitle.text!)
             
             cell.movieImage.layer.cornerRadius = 10
-           
+            
             return cell
         }
         return UICollectionViewCell()
@@ -90,12 +91,10 @@ extension MovieListCell : UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         print("콜렉션 뷰 " + String(indexPath.row))
-        //performSegue(withIdentifier: "segue_detail", sender: self)
-        /*
-        let vc = UIStoryboard(name: "Main", bundle: Bundle(for: DetailViewController.self)).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        self.present(vc, animated: false)*/
-        delegate?.loadNewScreen()
+        
+        let cell = collectionView.cellForItem(at: indexPath) as? MovieSingleCell
+            self.cellDelegate?.collectionView(collectionviewcell: cell, index: indexPath.item, didTappedInTableViewCell: self)
+
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {

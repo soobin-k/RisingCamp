@@ -12,7 +12,16 @@ import SwiftyJSON
 import SDWebImage
 import XLPagerTabStrip
 
-class ListViewController: UIViewController, IndicatorInfoProvider{
+class ListViewController: UIViewController, IndicatorInfoProvider, UICollectionViewDelegate, CollectionViewCellDelegate{
+    func collectionView(collectionviewcell: MovieSingleCell?, index: Int, didTappedInTableViewCell: MovieListCell) {
+        print("어쩌구")
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: false)
+    }
+    
+    
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -65,7 +74,7 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate{
             break
         }
         //cell.movielListTitle.text = "인기"
-        
+        cell.cellDelegate = self
         return cell
     }
     
