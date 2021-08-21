@@ -49,7 +49,7 @@ class BookViewController: UIViewController{
         let bookVO = BookVO.shared
         bookVO.movieDate.append(date)
         bookVO.movieTitle.append(movieTitle.text!)
-    
-        self.navigationController?.popViewController(animated: false)
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        //self.navigationController?.popViewController(animated: false)
     }
 }

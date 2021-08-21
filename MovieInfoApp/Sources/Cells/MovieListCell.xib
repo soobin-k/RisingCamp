@@ -49,7 +49,7 @@
                 <outlet property="collectionView" destination="9zz-QF-k4o" id="eeb-q8-01y"/>
                 <outlet property="movielListTitle" destination="zqr-xU-Z2v" id="V0m-SX-BQP"/>
             </connections>
-            <point key="canvasLocation" x="464" y="175"/>
+            <point key="canvasLocation" x="442" y="158"/>
         </tableViewCell>
     </objects>
     <resources>

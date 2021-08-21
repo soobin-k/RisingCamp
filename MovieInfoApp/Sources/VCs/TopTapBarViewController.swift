@@ -54,6 +54,6 @@ class TopTabBarViewController: ButtonBarPagerTabStripViewController{
         let child3 = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
 
         let child4 = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
-        return [child1, child4, child3, child2]
+        return [child1,  child3, child2]
     }
 }
