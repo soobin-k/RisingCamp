@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22590E7DF1E94F7EFD79D089 /* Pods_BoxOfficeAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33E18A011472EDFF7B71ECB7 /* Pods_BoxOfficeAPI.framework */; };
+		C39B80B126AFBBB7006EC424 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80B026AFBBB7006EC424 /* AppDelegate.swift */; };
+		C39B80B326AFBBB7006EC424 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80B226AFBBB7006EC424 /* SceneDelegate.swift */; };
+		C39B80B526AFBBB7006EC424 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80B426AFBBB7006EC424 /* ViewController.swift */; };
+		C39B80B826AFBBB7006EC424 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39B80B626AFBBB7006EC424 /* Main.storyboard */; };
+		C39B80BA26AFBBB8006EC424 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39B80B926AFBBB8006EC424 /* Assets.xcassets */; };
+		C39B80BD26AFBBB8006EC424 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39B80BB26AFBBB8006EC424 /* LaunchScreen.storyboard */; };
+		C39B80DC26AFBC21006EC424 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80C526AFBC21006EC424 /* Constant.swift */; };
+		C39B80DD26AFBC21006EC424 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80C726AFBC21006EC424 /* IndicatorView.swift */; };
+		C39B80DE26AFBC21006EC424 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80C826AFBC21006EC424 /* Device.swift */; };
+		C39B80DF26AFBC21006EC424 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80CA26AFBC21006EC424 /* Date.swift */; };
+		C39B80E026AFBC21006EC424 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80CB26AFBC21006EC424 /* String.swift */; };
+		C39B80E126AFBC21006EC424 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80CC26AFBC21006EC424 /* UIButton.swift */; };
+		C39B80E226AFBC21006EC424 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80CD26AFBC21006EC424 /* UIViewController.swift */; };
+		C39B80E326AFBC21006EC424 /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80CE26AFBC21006EC424 /* UINavigationBar.swift */; };
+		C39B80E426AFBC21006EC424 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80CF26AFBC21006EC424 /* UIFont.swift */; };
+		C39B80E526AFBC21006EC424 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80D026AFBC21006EC424 /* Color.swift */; };
+		C39B80E626AFBC21006EC424 /* KobisKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80D426AFBC21006EC424 /* KobisKey.swift */; };
+		C39B80E726AFBC21006EC424 /* NotoSansCJKkr-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C39B80D626AFBC21006EC424 /* NotoSansCJKkr-Medium.otf */; };
+		C39B80E826AFBC21006EC424 /* NotoSansCJKkr-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C39B80D726AFBC21006EC424 /* NotoSansCJKkr-Regular.otf */; };
+		C39B80E926AFBC21006EC424 /* NotoSansCJKkr-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C39B80D826AFBC21006EC424 /* NotoSansCJKkr-Bold.otf */; };
+		C39B80EA26AFBC21006EC424 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80DA26AFBC21006EC424 /* BaseViewController.swift */; };
+		C39B80F226AFBCB1006EC424 /* BoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80F026AFBCB1006EC424 /* BoxOfficeViewController.swift */; };
+		C39B80F326AFBCB1006EC424 /* BoxOfficeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39B80F126AFBCB1006EC424 /* BoxOfficeViewController.xib */; };
+		C39B80F526AFBDDB006EC424 /* BoxOfficeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80F426AFBDDB006EC424 /* BoxOfficeResponse.swift */; };
+		C39B80F826AFC23D006EC424 /* BoxOfficeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39B80F726AFC23D006EC424 /* BoxOfficeDataManager.swift */; };
+		C3A9A9CE26B04FA9001C8AED /* BoxOfficeReqViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A9A9CC26B04FA9001C8AED /* BoxOfficeReqViewController.swift */; };
+		C3A9A9CF26B04FA9001C8AED /* BoxOfficeReqViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3A9A9CD26B04FA9001C8AED /* BoxOfficeReqViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		33E18A011472EDFF7B71ECB7 /* Pods_BoxOfficeAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BoxOfficeAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		680C1FEFDE2AAF7BC5A4B0A7 /* Pods-BoxOfficeAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxOfficeAPI.release.xcconfig"; path = "Target Support Files/Pods-BoxOfficeAPI/Pods-BoxOfficeAPI.release.xcconfig"; sourceTree = "<group>"; };
+		A67F12B6018718A5CCD53FD7 /* Pods-BoxOfficeAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoxOfficeAPI.debug.xcconfig"; path = "Target Support Files/Pods-BoxOfficeAPI/Pods-BoxOfficeAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		C39B80AD26AFBBB7006EC424 /* BoxOfficeAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoxOfficeAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39B80B026AFBBB7006EC424 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C39B80B226AFBBB7006EC424 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C39B80B426AFBBB7006EC424 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C39B80B726AFBBB7006EC424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C39B80B926AFBBB8006EC424 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C39B80BC26AFBBB8006EC424 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C39B80BE26AFBBB8006EC424 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C39B80C526AFBC21006EC424 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		C39B80C726AFBC21006EC424 /* IndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
+		C39B80C826AFBC21006EC424 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C39B80CA26AFBC21006EC424 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		C39B80CB26AFBC21006EC424 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		C39B80CC26AFBC21006EC424 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		C39B80CD26AFBC21006EC424 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		C39B80CE26AFBC21006EC424 /* UINavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
+		C39B80CF26AFBC21006EC424 /* UIFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		C39B80D026AFBC21006EC424 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		C39B80D426AFBC21006EC424 /* KobisKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KobisKey.swift; sourceTree = "<group>"; };
+		C39B80D626AFBC21006EC424 /* NotoSansCJKkr-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Medium.otf"; sourceTree = "<group>"; };
+		C39B80D726AFBC21006EC424 /* NotoSansCJKkr-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Regular.otf"; sourceTree = "<group>"; };
+		C39B80D826AFBC21006EC424 /* NotoSansCJKkr-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Bold.otf"; sourceTree = "<group>"; };
+		C39B80DA26AFBC21006EC424 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C39B80F026AFBCB1006EC424 /* BoxOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeViewController.swift; sourceTree = "<group>"; };
+		C39B80F126AFBCB1006EC424 /* BoxOfficeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxOfficeViewController.xib; sourceTree = "<group>"; };
+		C39B80F426AFBDDB006EC424 /* BoxOfficeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeResponse.swift; sourceTree = "<group>"; };
+		C39B80F726AFC23D006EC424 /* BoxOfficeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeDataManager.swift; sourceTree = "<group>"; };
+		C3A9A9CC26B04FA9001C8AED /* BoxOfficeReqViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeReqViewController.swift; sourceTree = "<group>"; };
+		C3A9A9CD26B04FA9001C8AED /* BoxOfficeReqViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BoxOfficeReqViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C39B80AA26AFBBB7006EC424 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22590E7DF1E94F7EFD79D089 /* Pods_BoxOfficeAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		605C5B2FBDE6C77552A2A2AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A67F12B6018718A5CCD53FD7 /* Pods-BoxOfficeAPI.debug.xcconfig */,
+				680C1FEFDE2AAF7BC5A4B0A7 /* Pods-BoxOfficeAPI.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A40EAD29778ED3AC153C422A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33E18A011472EDFF7B71ECB7 /* Pods_BoxOfficeAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C39B80A426AFBBB7006EC424 = {
+			isa = PBXGroup;
+			children = (
+				C39B80AF26AFBBB7006EC424 /* BoxOfficeAPI */,
+				C39B80AE26AFBBB7006EC424 /* Products */,
+				605C5B2FBDE6C77552A2A2AA /* Pods */,
+				A40EAD29778ED3AC153C422A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C39B80AE26AFBBB7006EC424 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80AD26AFBBB7006EC424 /* BoxOfficeAPI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C39B80AF26AFBBB7006EC424 /* BoxOfficeAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80C426AFBC21006EC424 /* Configuration */,
+				C39B80EC26AFBC4D006EC424 /* Network */,
+				C39B80B026AFBBB7006EC424 /* AppDelegate.swift */,
+				C39B80B226AFBBB7006EC424 /* SceneDelegate.swift */,
+				C39B80B426AFBBB7006EC424 /* ViewController.swift */,
+				C39B80B626AFBBB7006EC424 /* Main.storyboard */,
+				C39B80B926AFBBB8006EC424 /* Assets.xcassets */,
+				C39B80BB26AFBBB8006EC424 /* LaunchScreen.storyboard */,
+				C39B80BE26AFBBB8006EC424 /* Info.plist */,
+			);
+			path = BoxOfficeAPI;
+			sourceTree = "<group>";
+		};
+		C39B80C426AFBC21006EC424 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80C526AFBC21006EC424 /* Constant.swift */,
+				C39B80C626AFBC21006EC424 /* CommonClass */,
+				C39B80C926AFBC21006EC424 /* Extension */,
+				C39B80D126AFBC21006EC424 /* Certificate */,
+				C39B80D226AFBC21006EC424 /* New Group */,
+				C39B80D326AFBC21006EC424 /* Secret */,
+				C39B80D526AFBC21006EC424 /* Font */,
+				C39B80D926AFBC21006EC424 /* Base */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C39B80C626AFBC21006EC424 /* CommonClass */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80C726AFBC21006EC424 /* IndicatorView.swift */,
+				C39B80C826AFBC21006EC424 /* Device.swift */,
+			);
+			path = CommonClass;
+			sourceTree = "<group>";
+		};
+		C39B80C926AFBC21006EC424 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80CA26AFBC21006EC424 /* Date.swift */,
+				C39B80CB26AFBC21006EC424 /* String.swift */,
+				C39B80CC26AFBC21006EC424 /* UIButton.swift */,
+				C39B80CD26AFBC21006EC424 /* UIViewController.swift */,
+				C39B80CE26AFBC21006EC424 /* UINavigationBar.swift */,
+				C39B80CF26AFBC21006EC424 /* UIFont.swift */,
+				C39B80D026AFBC21006EC424 /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C39B80D126AFBC21006EC424 /* Certificate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Certificate;
+			sourceTree = "<group>";
+		};
+		C39B80D226AFBC21006EC424 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		C39B80D326AFBC21006EC424 /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80D426AFBC21006EC424 /* KobisKey.swift */,
+			);
+			path = Secret;
+			sourceTree = "<group>";
+		};
+		C39B80D526AFBC21006EC424 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80D626AFBC21006EC424 /* NotoSansCJKkr-Medium.otf */,
+				C39B80D726AFBC21006EC424 /* NotoSansCJKkr-Regular.otf */,
+				C39B80D826AFBC21006EC424 /* NotoSansCJKkr-Bold.otf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		C39B80D926AFBC21006EC424 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80DA26AFBC21006EC424 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		C39B80EC26AFBC4D006EC424 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80ED26AFBC5B006EC424 /* BoxOffice */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C39B80ED26AFBC5B006EC424 /* BoxOffice */ = {
+			isa = PBXGroup;
+			children = (
+				C3A9A9CB26B04F81001C8AED /* Req */,
+				C39B80F626AFC211006EC424 /* DataManager */,
+				C39B80EF26AFBC79006EC424 /* Entity */,
+				C39B80EE26AFBC6D006EC424 /* Search */,
+			);
+			path = BoxOffice;
+			sourceTree = "<group>";
+		};
+		C39B80EE26AFBC6D006EC424 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80F026AFBCB1006EC424 /* BoxOfficeViewController.swift */,
+				C39B80F126AFBCB1006EC424 /* BoxOfficeViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		C39B80EF26AFBC79006EC424 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80F426AFBDDB006EC424 /* BoxOfficeResponse.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C39B80F626AFC211006EC424 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				C39B80F726AFC23D006EC424 /* BoxOfficeDataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		C3A9A9CB26B04F81001C8AED /* Req */ = {
+			isa = PBXGroup;
+			children = (
+				C3A9A9CC26B04FA9001C8AED /* BoxOfficeReqViewController.swift */,
+				C3A9A9CD26B04FA9001C8AED /* BoxOfficeReqViewController.xib */,
+			);
+			path = Req;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C39B80AC26AFBBB7006EC424 /* BoxOfficeAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C39B80C126AFBBB8006EC424 /* Build configuration list for PBXNativeTarget "BoxOfficeAPI" */;
+			buildPhases = (
+				DAC8E0FFCDD38086EA808C2C /* [CP] Check Pods Manifest.lock */,
+				C39B80A926AFBBB7006EC424 /* Sources */,
+				C39B80AA26AFBBB7006EC424 /* Frameworks */,
+				C39B80AB26AFBBB7006EC424 /* Resources */,
+				125E66CA5074A3E8B637066D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BoxOfficeAPI;
+			productName = BoxOfficeAPI;
+			productReference = C39B80AD26AFBBB7006EC424 /* BoxOfficeAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C39B80A526AFBBB7006EC424 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					C39B80AC26AFBBB7006EC424 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = C39B80A826AFBBB7006EC424 /* Build configuration list for PBXProject "BoxOfficeAPI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C39B80A426AFBBB7006EC424;
+			productRefGroup = C39B80AE26AFBBB7006EC424 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C39B80AC26AFBBB7006EC424 /* BoxOfficeAPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C39B80AB26AFBBB7006EC424 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39B80F326AFBCB1006EC424 /* BoxOfficeViewController.xib in Resources */,
+				C39B80E826AFBC21006EC424 /* NotoSansCJKkr-Regular.otf in Resources */,
+				C39B80BD26AFBBB8006EC424 /* LaunchScreen.storyboard in Resources */,
+				C3A9A9CF26B04FA9001C8AED /* BoxOfficeReqViewController.xib in Resources */,
+				C39B80BA26AFBBB8006EC424 /* Assets.xcassets in Resources */,
+				C39B80B826AFBBB7006EC424 /* Main.storyboard in Resources */,
+				C39B80E726AFBC21006EC424 /* NotoSansCJKkr-Medium.otf in Resources */,
+				C39B80E926AFBC21006EC424 /* NotoSansCJKkr-Bold.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		125E66CA5074A3E8B637066D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoxOfficeAPI/Pods-BoxOfficeAPI-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BoxOfficeAPI/Pods-BoxOfficeAPI-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BoxOfficeAPI/Pods-BoxOfficeAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAC8E0FFCDD38086EA808C2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BoxOfficeAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C39B80A926AFBBB7006EC424 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39B80F826AFC23D006EC424 /* BoxOfficeDataManager.swift in Sources */,
+				C39B80B526AFBBB7006EC424 /* ViewController.swift in Sources */,
+				C39B80B126AFBBB7006EC424 /* AppDelegate.swift in Sources */,
+				C39B80DF26AFBC21006EC424 /* Date.swift in Sources */,
+				C39B80B326AFBBB7006EC424 /* SceneDelegate.swift in Sources */,
+				C39B80F226AFBCB1006EC424 /* BoxOfficeViewController.swift in Sources */,
+				C39B80E526AFBC21006EC424 /* Color.swift in Sources */,
+				C39B80EA26AFBC21006EC424 /* BaseViewController.swift in Sources */,
+				C39B80E226AFBC21006EC424 /* UIViewController.swift in Sources */,
+				C39B80E626AFBC21006EC424 /* KobisKey.swift in Sources */,
+				C39B80DE26AFBC21006EC424 /* Device.swift in Sources */,
+				C3A9A9CE26B04FA9001C8AED /* BoxOfficeReqViewController.swift in Sources */,
+				C39B80DC26AFBC21006EC424 /* Constant.swift in Sources */,
+				C39B80E026AFBC21006EC424 /* String.swift in Sources */,
+				C39B80E426AFBC21006EC424 /* UIFont.swift in Sources */,
+				C39B80DD26AFBC21006EC424 /* IndicatorView.swift in Sources */,
+				C39B80E326AFBC21006EC424 /* UINavigationBar.swift in Sources */,
+				C39B80F526AFBDDB006EC424 /* BoxOfficeResponse.swift in Sources */,
+				C39B80E126AFBC21006EC424 /* UIButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C39B80B626AFBBB7006EC424 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C39B80B726AFBBB7006EC424 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C39B80BB26AFBBB8006EC424 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C39B80BC26AFBBB8006EC424 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C39B80BF26AFBBB8006EC424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C39B80C026AFBBB8006EC424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C39B80C226AFBBB8006EC424 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A67F12B6018718A5CCD53FD7 /* Pods-BoxOfficeAPI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BoxOfficeAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chobi.BoxOfficeAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C39B80C326AFBBB8006EC424 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 680C1FEFDE2AAF7BC5A4B0A7 /* Pods-BoxOfficeAPI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BoxOfficeAPI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chobi.BoxOfficeAPI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C39B80A826AFBBB7006EC424 /* Build configuration list for PBXProject "BoxOfficeAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39B80BF26AFBBB8006EC424 /* Debug */,
+				C39B80C026AFBBB8006EC424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C39B80C126AFBBB8006EC424 /* Build configuration list for PBXNativeTarget "BoxOfficeAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39B80C226AFBBB8006EC424 /* Debug */,
+				C39B80C326AFBBB8006EC424 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C39B80A526AFBBB7006EC424 /* Project object */;
+}
