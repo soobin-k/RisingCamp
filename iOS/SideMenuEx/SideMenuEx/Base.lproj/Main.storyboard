@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bJI-by-mRO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--메인 메뉴-->
+        <scene sceneID="A8T-ay-O5D">
+            <objects>
+                <viewController id="Eo8-cF-o6o" customClass="ViewController" customModule="SideMenuEx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jvR-QQ-Mu1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xAn-vs-omg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="메인 메뉴" id="Tbo-am-wg3">
+                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3" catalog="system" id="Z4n-zU-BSP">
+                            <connections>
+                                <segue destination="u3p-dL-ecR" kind="show" id="hp6-Bm-z78"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohD-PC-FjB" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="443" y="92"/>
+        </scene>
+        <!--Custom Side Menu Navigation-->
+        <scene sceneID="bNX-pF-hrl">
+            <objects>
+                <navigationController id="u3p-dL-ecR" customClass="CustomSideMenuNavigation" customModule="SideMenuEx" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ftf-lN-jfp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="as4-vL-FhX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tPD-JK-DsU" kind="relationship" relationship="rootViewController" id="UEE-gp-YOT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDS-rb-sxG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1219" y="92"/>
+        </scene>
+        <!--사이드 메뉴-->
+        <scene sceneID="8qT-CH-XGN">
+            <objects>
+                <viewController storyboardIdentifier="SideMenuViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tPD-JK-DsU" customClass="SideMenuViewController" customModule="SideMenuEx" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uNx-Xg-b30">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SideMenu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3zq-3y-5Y7">
+                                <rect key="frame" x="136.5" y="430" width="141" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XFR-dK-GNw"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="3zq-3y-5Y7" firstAttribute="centerY" secondItem="uNx-Xg-b30" secondAttribute="centerY" id="Gcf-dJ-CvO"/>
+                            <constraint firstItem="3zq-3y-5Y7" firstAttribute="centerX" secondItem="uNx-Xg-b30" secondAttribute="centerX" id="gg4-TX-6aU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="사이드 메뉴" id="khA-Y6-07P"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fN9-kA-Hrw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1987" y="92"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rZT-ED-FOQ">
+            <objects>
+                <navigationController id="bJI-by-mRO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gam-na-8ie">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Eo8-cF-o6o" kind="relationship" relationship="rootViewController" id="6mr-fe-UEY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YFz-Ni-lbX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
