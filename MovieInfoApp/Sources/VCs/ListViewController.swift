@@ -14,7 +14,7 @@ import XLPagerTabStrip
 
 class ListViewController: UIViewController, IndicatorInfoProvider, UICollectionViewDelegate, CollectionViewCellDelegate{
     func collectionView(collectionviewcell: MovieSingleCell?, index: Int, didTappedInTableViewCell: MovieListCell) {
-        print("어쩌구")
+        
         let movieVO = MovieVO.shared
         movieVO.index = index
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
