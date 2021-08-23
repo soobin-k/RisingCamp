@@ -14,7 +14,9 @@
 
 : 스토리보드/xib 상에서 뷰컨트롤러 간 화면 전환(총 5가지 방법)
 
-https://chobikim.tistory.com/45
+✔️ 스토리 보드 https://chobikim.tistory.com/45
+
+✔️ xib https://chobikim.tistory.com/40
 
 ### 📌  SideMenuEx
 
