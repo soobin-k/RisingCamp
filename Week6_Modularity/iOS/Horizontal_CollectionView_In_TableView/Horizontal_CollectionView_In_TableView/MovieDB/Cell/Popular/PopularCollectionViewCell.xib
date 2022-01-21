@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PopularCollectionViewCell" customModule="Horizontal_CollectionView_In_TableView" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="179"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="179"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="Play" translatesAutoresizingMaskIntoConstraints="NO" id="DuR-cx-rRm">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="147"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화 제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFi-XY-chy">
+                        <rect key="frame" x="0.0" y="155" width="150" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="OFi-XY-chy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3zq-Jl-mqE"/>
+                <constraint firstAttribute="bottom" secondItem="OFi-XY-chy" secondAttribute="bottom" id="AlW-Ka-EQg"/>
+                <constraint firstItem="OFi-XY-chy" firstAttribute="top" secondItem="DuR-cx-rRm" secondAttribute="bottom" constant="8" symbolic="YES" id="J4W-mH-aIe"/>
+                <constraint firstAttribute="trailing" secondItem="OFi-XY-chy" secondAttribute="trailing" id="N6G-21-Y9e"/>
+                <constraint firstItem="DuR-cx-rRm" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UPJ-xZ-Mcc"/>
+                <constraint firstItem="DuR-cx-rRm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="e3b-v9-pHa"/>
+                <constraint firstAttribute="trailing" secondItem="DuR-cx-rRm" secondAttribute="trailing" id="tU2-vI-xNh"/>
+            </constraints>
+            <size key="customSize" width="256" height="291"/>
+            <connections>
+                <outlet property="movieImage" destination="DuR-cx-rRm" id="k6i-3R-kjd"/>
+                <outlet property="movieTitle" destination="OFi-XY-chy" id="dmk-FP-lJB"/>
+            </connections>
+            <point key="canvasLocation" x="-23.188405797101453" y="7.7008928571428568"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Play" width="500" height="500"/>
+    </resources>
+</document>

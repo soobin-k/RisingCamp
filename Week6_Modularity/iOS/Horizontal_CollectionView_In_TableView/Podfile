@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Horizontal_CollectionView_In_TableView' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Horizontal_CollectionView_In_TableView
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'SDWebImage'
+  pod 'XLPagerTabStrip'
+  pod 'MSPeekCollectionViewDelegateImplementation'
+  pod 'SnapKit'
+end
