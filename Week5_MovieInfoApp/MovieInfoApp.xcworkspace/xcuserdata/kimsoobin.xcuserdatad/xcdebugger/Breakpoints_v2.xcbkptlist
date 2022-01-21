@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1C604DC6-4506-44A1-9EBE-F0BE76D7E8A3"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B40FD785-BEA3-4B12-8D7D-F7ABC44793F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieInfoApp/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "B40FD785-BEA3-4B12-8D7D-F7ABC44793F8 - c231a58027de9f5c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.ViewController.__allocating_init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MovieInfoApp.ViewController"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "B40FD785-BEA3-4B12-8D7D-F7ABC44793F8 - 5b964bcccc289e9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MovieInfoApp.ViewController"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "B40FD785-BEA3-4B12-8D7D-F7ABC44793F8 - 382021c317546ade"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.ViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MovieInfoApp.ViewController&gt;"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "B40FD785-BEA3-4B12-8D7D-F7ABC44793F8 - 51157e85e0e4dd60"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MovieInfoApp.ViewController&gt;"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "B40FD785-BEA3-4B12-8D7D-F7ABC44793F8 - 64dc11406d56e5dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.ViewController.__deallocating_deinit"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3A962889-0606-49EC-8C8B-F8C375594995"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieInfoApp/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "8"
+            endingLineNumber = "8"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CB37EAC-7662-4432-BD2C-225BB3E04DF6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieInfoApp/Sources/Cells/MovieSingleCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E748E982-AAD0-4445-B105-5AF2BB734867"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieInfoApp/Sources/Cells/BookCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "E748E982-AAD0-4445-B105-5AF2BB734867 - 2ea8bd816050420b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.BookCell.__allocating_init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; MovieInfoApp.BookCell"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/Sources/Cells/BookCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "E748E982-AAD0-4445-B105-5AF2BB734867 - c36c98b00bb4fd85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.BookCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; MovieInfoApp.BookCell"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/Sources/Cells/BookCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "E748E982-AAD0-4445-B105-5AF2BB734867 - 2125aa4ab35dc75"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.BookCell.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MovieInfoApp.BookCell&gt;"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/Sources/Cells/BookCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "E748E982-AAD0-4445-B105-5AF2BB734867 - 6aa2934af6a556ca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.BookCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MovieInfoApp.BookCell&gt;"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/Sources/Cells/BookCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "E748E982-AAD0-4445-B105-5AF2BB734867 - aefbfc10dff94fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieInfoApp.BookCell.__deallocating_deinit"
+                  moduleName = "MovieInfoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kimsoobin/Desktop/rising%20camp/week5/MovieInfoApp/MovieInfoApp/Sources/Cells/BookCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
