@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="AccountCell" rowHeight="50" id="KGk-i7-Jjw" customClass="AccountTableViewCell" customModule="AccountBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="449" height="62"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="419.5" height="62"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="online-shopping" translatesAutoresizingMaskIntoConstraints="NO" id="X3r-sq-Yur">
+                        <rect key="frame" x="16" y="3.5" width="50" height="54.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="kCx-Ue-jqO"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="쇼핑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wo8-KG-bD1">
+                        <rect key="frame" x="96" y="5" width="35" height="24"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020.07.06" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cw-yn-uzR">
+                        <rect key="frame" x="312.5" y="33" width="77" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₩5,000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWN-89-ULn">
+                        <rect key="frame" x="325.5" y="7" width="64" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <color key="textColor" systemColor="systemRedColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수빈이랑 쇼핑" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTV-PV-fUq">
+                        <rect key="frame" x="96" y="35" width="82" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wo8-KG-bD1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="3HS-Wt-db5"/>
+                    <constraint firstItem="X3r-sq-Yur" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3.5" id="4eI-D4-z10"/>
+                    <constraint firstItem="CTV-PV-fUq" firstAttribute="top" secondItem="Wo8-KG-bD1" secondAttribute="bottom" constant="6" id="5cM-tC-J9R"/>
+                    <constraint firstAttribute="bottom" secondItem="X3r-sq-Yur" secondAttribute="bottom" constant="4" id="5rQ-eX-caQ"/>
+                    <constraint firstAttribute="trailing" secondItem="EWN-89-ULn" secondAttribute="trailing" constant="30" id="EYo-e2-S0e"/>
+                    <constraint firstAttribute="bottom" secondItem="CTV-PV-fUq" secondAttribute="bottom" constant="9" id="SZG-I7-4MA"/>
+                    <constraint firstAttribute="bottom" secondItem="4cw-yn-uzR" secondAttribute="bottom" constant="11" id="YVQ-qf-Bem"/>
+                    <constraint firstItem="CTV-PV-fUq" firstAttribute="leading" secondItem="X3r-sq-Yur" secondAttribute="trailing" constant="30" id="apn-V1-GWh"/>
+                    <constraint firstAttribute="trailing" secondItem="4cw-yn-uzR" secondAttribute="trailing" constant="30" id="h4v-0j-jwF"/>
+                    <constraint firstItem="Wo8-KG-bD1" firstAttribute="leading" secondItem="X3r-sq-Yur" secondAttribute="trailing" constant="30" id="pJn-na-adh"/>
+                    <constraint firstItem="EWN-89-ULn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="qpa-ij-aAc"/>
+                    <constraint firstItem="X3r-sq-Yur" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wrR-1a-XVi"/>
+                    <constraint firstItem="4cw-yn-uzR" firstAttribute="top" secondItem="EWN-89-ULn" secondAttribute="bottom" constant="5" id="ytf-6c-xOW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="uiDate" destination="4cw-yn-uzR" id="6QB-bs-Fir"/>
+                <outlet property="uiImage" destination="X3r-sq-Yur" id="uXU-If-5Yp"/>
+                <outlet property="uiMemo" destination="CTV-PV-fUq" id="Uk8-8U-vwX"/>
+                <outlet property="uiPrice" destination="EWN-89-ULn" id="C2e-Kz-ok8"/>
+                <outlet property="uiType" destination="Wo8-KG-bD1" id="PTi-0G-9fo"/>
+            </connections>
+            <point key="canvasLocation" x="193" y="-42"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="online-shopping" width="50" height="50"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
