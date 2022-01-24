@@ -11,7 +11,7 @@
  
 [![에이블리 UI 구성해보기](https://img.youtube.com/vi/adsQ0Cs6fXo/0.jpg)](https://youtu.be/adsQ0Cs6fXo?t=0s)
 
-👆🏻 👆🏻 👆🏻   `실행 영상 유튜브 링크`👆🏻 👆🏻 👆🏻  <br><br>
+👆🏻 👆🏻 👆🏻 `실행 영상 유튜브 링크`👆🏻 👆🏻 👆🏻  <br><br>
 
 ## 📌 사용한 프로덕트
 ```
