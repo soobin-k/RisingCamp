@@ -1,4 +1,4 @@
-# <img width=35px src=https://user-images.githubusercontent.com/77331348/150846738-e136ff18-5c6d-42e9-bdca-109d7610f30a.png> RisingCamp 1기 
+# 🏕 RisingCamp 1기 
 > 프로그램 기간 : 21.06.19 ~ 21.09.02   
 
 <img src="https://user-images.githubusercontent.com/77331348/150845690-b25db907-c937-4f9e-926d-148a49617872.png">
